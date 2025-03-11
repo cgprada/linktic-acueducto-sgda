@@ -7,29 +7,139 @@ package co.com.acueducto.sgda.jbpm.modelo;
 @javax.persistence.Entity
 public class SolicitudPQRS implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    @javax.persistence.GeneratedValue(strategy = javax.persistence.GenerationType.AUTO, generator = "SOLICITUDPQRS_ID_GENERATOR")
-    @javax.persistence.Id
-    @javax.persistence.SequenceGenerator(name = "SOLICITUDPQRS_ID_GENERATOR", sequenceName = "SOLICITUDPQRS_ID_SEQ")
-    private java.lang.Long id;
+	@javax.persistence.GeneratedValue(strategy = javax.persistence.GenerationType.AUTO, generator = "SOLICITUDPQRS_ID_GENERATOR")
+	@javax.persistence.Id
+	@javax.persistence.SequenceGenerator(name = "SOLICITUDPQRS_ID_GENERATOR", sequenceName = "SOLICITUDPQRS_ID_SEQ")
+	private java.lang.Long id;
 
-    public SolicitudPQRS() {
-    }
-    
-    public SolicitudPQRS(java.lang.Long id) {
-        this.id = id;
-    }
+	@org.kie.api.definition.type.Label(value = "Cuenta Contrato")
+	private java.lang.String cuentaContrato;
 
-    public java.lang.Long getId() {
-        return this.id;
-    }
-    
-    public void setId(java.lang.Long id) {
-        this.id = id;
-    }
+	@org.kie.api.definition.type.Label(value = "Número Radicado Entrada")
+	private java.lang.String radEntrada;
 
+	@org.kie.api.definition.type.Label(value = "Fecha Radicación")
+	private java.time.LocalDateTime fechaRadicacion;
 
+	@org.kie.api.definition.type.Label(value = "Fecha Vencimiento")
+	private java.time.LocalDateTime fechaVencimiento;
 
+	@org.kie.api.definition.type.Label(value = "Area Asignada")
+	private java.lang.String area;
+
+	@org.kie.api.definition.type.Label(value = "Tipo Solicitud")
+	private java.lang.String tipo;
+
+	@org.kie.api.definition.type.Label(value = "Estado Solicitud")
+	private java.lang.String estado;
+
+	@org.kie.api.definition.type.Label(value = "Alerta")
+	private java.lang.String alerta;
+
+	@org.kie.api.definition.type.Label(value = "Clasificación Interna")
+	private java.lang.String clasificacionInterna;
+
+	public SolicitudPQRS() {
+	}
+
+	public java.lang.Long getId() {
+		return this.id;
+	}
+
+	public void setId(java.lang.Long id) {
+		this.id = id;
+	}
+
+	public java.lang.String getCuentaContrato() {
+		return this.cuentaContrato;
+	}
+
+	public void setCuentaContrato(java.lang.String cuentaContrato) {
+		this.cuentaContrato = cuentaContrato;
+	}
+
+	public java.lang.String getRadEntrada() {
+		return this.radEntrada;
+	}
+
+	public void setRadEntrada(java.lang.String radEntrada) {
+		this.radEntrada = radEntrada;
+	}
+
+	public java.time.LocalDateTime getFechaRadicacion() {
+		return this.fechaRadicacion;
+	}
+
+	public void setFechaRadicacion(java.time.LocalDateTime fechaRadicacion) {
+		this.fechaRadicacion = fechaRadicacion;
+	}
+
+	public java.time.LocalDateTime getFechaVencimiento() {
+		return this.fechaVencimiento;
+	}
+
+	public void setFechaVencimiento(java.time.LocalDateTime fechaVencimiento) {
+		this.fechaVencimiento = fechaVencimiento;
+	}
+
+	public java.lang.String getArea() {
+		return this.area;
+	}
+
+	public void setArea(java.lang.String area) {
+		this.area = area;
+	}
+
+	public java.lang.String getTipo() {
+		return this.tipo;
+	}
+
+	public void setTipo(java.lang.String tipo) {
+		this.tipo = tipo;
+	}
+
+	public java.lang.String getEstado() {
+		return this.estado;
+	}
+
+	public void setEstado(java.lang.String estado) {
+		this.estado = estado;
+	}
+
+	public java.lang.String getAlerta() {
+		return this.alerta;
+	}
+
+	public void setAlerta(java.lang.String alerta) {
+		this.alerta = alerta;
+	}
+
+	public java.lang.String getClasificacionInterna() {
+		return this.clasificacionInterna;
+	}
+
+	public void setClasificacionInterna(java.lang.String clasificacionInterna) {
+		this.clasificacionInterna = clasificacionInterna;
+	}
+
+	public SolicitudPQRS(java.lang.Long id, java.lang.String cuentaContrato,
+			java.lang.String radEntrada,
+			java.time.LocalDateTime fechaRadicacion,
+			java.time.LocalDateTime fechaVencimiento, java.lang.String area,
+			java.lang.String tipo, java.lang.String estado,
+			java.lang.String alerta, java.lang.String clasificacionInterna) {
+		this.id = id;
+		this.cuentaContrato = cuentaContrato;
+		this.radEntrada = radEntrada;
+		this.fechaRadicacion = fechaRadicacion;
+		this.fechaVencimiento = fechaVencimiento;
+		this.area = area;
+		this.tipo = tipo;
+		this.estado = estado;
+		this.alerta = alerta;
+		this.clasificacionInterna = clasificacionInterna;
+	}
 
 }
