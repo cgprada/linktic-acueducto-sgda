@@ -8,7 +8,20 @@
     <marshalling-strategies/>
     <event-listeners/>
     <task-event-listeners/>
-    <globals/>
+    <globals>
+        <global>
+            <resolver>mvel</resolver>
+            <identifier>'P3D'</identifier>
+            <parameters/>
+            <name>gduracionRechazoTipificador</name>
+        </global>
+        <global>
+            <resolver>mvel</resolver>
+            <identifier>'P5D'</identifier>
+            <parameters/>
+            <name>gduracionRechazoProyector</name>
+        </global>
+    </globals>
     <work-item-handlers/>
     <environment-entries/>
     <configurations/>
