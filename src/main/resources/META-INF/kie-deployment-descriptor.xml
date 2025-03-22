@@ -11,21 +11,21 @@
     <globals>
         <global>
             <resolver>mvel</resolver>
-            <identifier>'P3D'</identifier>
-            <parameters/>
-            <name>gduracionRechazoTipificador</name>
-        </global>
-        <global>
-            <resolver>mvel</resolver>
-            <identifier>'{"P":{"codigo":"P","tipoSolicitud":"Derecho de petición"},"Q":{"codigo":"Q","tipoSolicitud":"Queja"},"R":{"codigo":"R","tipoSolicitud":"Reclamo"},"S":{"codigo":"S","tipoSolicitud":"Solicitud"},"D":{"codigo":"D","tipoSolicitud":"Denuncia"},"F":{"codigo":"F","tipoSolicitud":"Felicitaciones"}}'</identifier>
-            <parameters/>
-            <name>gclasificacionPqrs</name>
-        </global>
-        <global>
-            <resolver>mvel</resolver>
             <identifier>'P5D'</identifier>
             <parameters/>
-            <name>gduracionRechazoProyector</name>
+            <name>gDuracionRechazoProyector</name>
+        </global>
+        <global>
+            <resolver>mvel</resolver>
+            <identifier>{"D":{"tipoSolicitud":"Denuncia","tipoTramite":"Denuncia","diasTramite":"P15D","diaSiguienteFlag":true},"DC":{"tipoSolicitud":"Derecho de petición","tipoTramite":"DC: Derecho de petición - Consulta","diasTramite":"P15D","diaSiguienteFlag":true},"DEE":{"tipoSolicitud":"Derecho de petición","tipoTramite":"DEE: Derecho de petición - Entre Entidades","diasTramite":"P10D","diaSiguienteFlag":true},"DG":{"tipoSolicitud":"Derecho de petición","tipoTramite":"DG: Derecho de petición - General","diasTramite":"P15D","diaSiguienteFlag":true},"DP":{"tipoSolicitud":"Derecho de petición","tipoTramite":"DP: Derecho de petición - Particular","diasTramite":"P15D","diaSiguienteFlag":true},"CR":{"tipoSolicitud":"Derecho de petición","tipoTramite":"Congreso de la república","diasTramite":"P5D","diaSiguienteFlag":true},"EC":{"tipoSolicitud":"Derecho de petición","tipoTramite":"Entes de control","diasTramite":"P10D","diaSiguienteFlag":true},"F":{"tipoSolicitud":"Derecho de petición","tipoTramite":"Felicitaciones","diasTramite":"P15D","diaSiguienteFlag":true},"Q":{"tipoSolicitud":"Derecho de petición","tipoTramite":"Q: Queja","diasTramite":"P15D","diaSiguienteFlag":true},"R":{"tipoSolicitud":"Derecho de petición","tipoTramite":"Reclamo","diasTramite":"P15D","diaSiguienteFlag":true}}</identifier>
+            <parameters/>
+            <name>gTiposTramite</name>
+        </global>
+        <global>
+            <resolver>mvel</resolver>
+            <identifier>'P3D'</identifier>
+            <parameters/>
+            <name>gDuracionRechazoTipificador</name>
         </global>
     </globals>
     <work-item-handlers/>
