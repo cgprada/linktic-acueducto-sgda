@@ -6,12 +6,59 @@ package co.com.acueducto.sgda.jbpm.modelo;
 
 public class TipoTramite implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public TipoTramite() {
-    }
+	@org.kie.api.definition.type.Label(value = "Tipo Solicitud")
+	private java.lang.String tipoSolicitud;
+	@org.kie.api.definition.type.Label(value = "Tipo Tramite")
+	private java.lang.String tipoTramite;
+	@org.kie.api.definition.type.Label(value = "Dias de Tramite")
+	private java.lang.String diasTramite;
+	@org.kie.api.definition.type.Label(value = "Inicia desde el día siguiente")
+	private boolean diaSiguienteFlag;
 
+	public TipoTramite() {
+	}
 
+	public java.lang.String getTipoSolicitud() {
+		return this.tipoSolicitud;
+	}
 
+	public void setTipoSolicitud(java.lang.String tipoSolicitud) {
+		this.tipoSolicitud = tipoSolicitud;
+	}
+
+	public java.lang.String getTipoTramite() {
+		return this.tipoTramite;
+	}
+
+	public void setTipoTramite(java.lang.String tipoTramite) {
+		this.tipoTramite = tipoTramite;
+	}
+
+	public java.lang.String getDiasTramite() {
+		return this.diasTramite;
+	}
+
+	public void setDiasTramite(java.lang.String diasTramite) {
+		this.diasTramite = diasTramite;
+	}
+
+	public boolean isDiaSiguienteFlag() {
+		return this.diaSiguienteFlag;
+	}
+
+	public void setDiaSiguienteFlag(boolean diaSiguienteFlag) {
+		this.diaSiguienteFlag = diaSiguienteFlag;
+	}
+
+	public TipoTramite(java.lang.String tipoSolicitud,
+			java.lang.String tipoTramite, java.lang.String diasTramite,
+			boolean diaSiguienteFlag) {
+		this.tipoSolicitud = tipoSolicitud;
+		this.tipoTramite = tipoTramite;
+		this.diasTramite = diasTramite;
+		this.diaSiguienteFlag = diaSiguienteFlag;
+	}
 
 }
