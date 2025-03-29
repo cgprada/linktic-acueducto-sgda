@@ -6,12 +6,81 @@ package co.com.acueducto.sgda.jbpm.modelo;
 
 public class Usuario implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public Usuario() {
-    }
+	@org.kie.api.definition.type.Label(value = "Usuario")
+	private java.lang.String usuario;
+	@org.kie.api.definition.type.Label(value = "Actividad")
+	private java.lang.String actividad;
+	@org.kie.api.definition.type.Label(value = "Aprueba Respuesta?")
+	private java.lang.Boolean aprobacionFlag;
+	@org.kie.api.definition.type.Label(value = "Observaciones Aprobación")
+	private java.lang.String aprobacionObs;
+	@org.kie.api.definition.type.Label(value = "Fecha Aprobación")
+	private java.lang.String fechaAprobacion;
+	@org.kie.api.definition.type.Label(value = "Fecha Asignación")
+	private java.lang.String fechaAsignacion;
 
+	public Usuario() {
+	}
 
+	public java.lang.String getUsuario() {
+		return this.usuario;
+	}
 
+	public void setUsuario(java.lang.String usuario) {
+		this.usuario = usuario;
+	}
+
+	public java.lang.String getActividad() {
+		return this.actividad;
+	}
+
+	public void setActividad(java.lang.String actividad) {
+		this.actividad = actividad;
+	}
+
+	public java.lang.Boolean getAprobacionFlag() {
+		return this.aprobacionFlag;
+	}
+
+	public void setAprobacionFlag(java.lang.Boolean aprobacionFlag) {
+		this.aprobacionFlag = aprobacionFlag;
+	}
+
+	public java.lang.String getAprobacionObs() {
+		return this.aprobacionObs;
+	}
+
+	public void setAprobacionObs(java.lang.String aprobacionObs) {
+		this.aprobacionObs = aprobacionObs;
+	}
+
+	public java.lang.String getFechaAprobacion() {
+		return this.fechaAprobacion;
+	}
+
+	public void setFechaAprobacion(java.lang.String fechaAprobacion) {
+		this.fechaAprobacion = fechaAprobacion;
+	}
+
+	public java.lang.String getFechaAsignacion() {
+		return this.fechaAsignacion;
+	}
+
+	public void setFechaAsignacion(java.lang.String fechaAsignacion) {
+		this.fechaAsignacion = fechaAsignacion;
+	}
+
+	public Usuario(java.lang.String usuario, java.lang.String actividad,
+			java.lang.Boolean aprobacionFlag, java.lang.String aprobacionObs,
+			java.lang.String fechaAprobacion, java.lang.String fechaAsignacion) {
+		this.usuario = usuario;
+		this.actividad = actividad;
+		this.aprobacionFlag = aprobacionFlag;
+		this.aprobacionObs = aprobacionObs;
+		this.fechaAprobacion = fechaAprobacion;
+		this.fechaAsignacion = fechaAsignacion;
+	}
 
 }
