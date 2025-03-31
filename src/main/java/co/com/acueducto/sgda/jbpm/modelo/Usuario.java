@@ -11,18 +11,25 @@ public class Usuario implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label(value = "Usuario")
+	@org.kie.api.definition.type.Label("Usuario")
 	private java.lang.String usuario;
-	@org.kie.api.definition.type.Label(value = "Actividad")
+	@org.kie.api.definition.type.Label("Actividad")
 	private java.lang.String actividad;
-	@org.kie.api.definition.type.Label(value = "Aprueba Respuesta?")
+	@org.kie.api.definition.type.Label("Aprueba Respuesta?")
 	private java.lang.Boolean aprobacionFlag;
-	@org.kie.api.definition.type.Label(value = "Observaciones Aprobación")
-	private java.lang.String aprobacionObs;
-	@org.kie.api.definition.type.Label(value = "Fecha Aprobación")
+	@org.kie.api.definition.type.Label("Fecha Aprobación")
 	private java.lang.String fechaAprobacion;
-	@org.kie.api.definition.type.Label(value = "Fecha Asignación")
+	@org.kie.api.definition.type.Label("Fecha Asignación")
 	private java.lang.String fechaAsignacion;
+
+	@org.kie.api.definition.type.Label(value = "Causal de Rechazo")
+	private java.lang.String aprobacionRechazoCausal;
+
+	@org.kie.api.definition.type.Label(value = "Causal Otro")
+	private java.lang.String aprobacionRechazoOtro;
+
+	@org.kie.api.definition.type.Label(value = "Observaciones")
+	private java.lang.String aprobacionRechazoObs;
 
 	public Usuario() {
 	}
@@ -51,14 +58,6 @@ public class Usuario implements java.io.Serializable {
 		this.aprobacionFlag = aprobacionFlag;
 	}
 
-	public java.lang.String getAprobacionObs() {
-		return this.aprobacionObs;
-	}
-
-	public void setAprobacionObs(java.lang.String aprobacionObs) {
-		this.aprobacionObs = aprobacionObs;
-	}
-
 	public java.lang.String getFechaAprobacion() {
 		return this.fechaAprobacion;
 	}
@@ -75,21 +74,51 @@ public class Usuario implements java.io.Serializable {
 		this.fechaAsignacion = fechaAsignacion;
 	}
 
-	public Usuario(java.lang.String usuario, java.lang.String actividad,
-			java.lang.Boolean aprobacionFlag, java.lang.String aprobacionObs,
-			java.lang.String fechaAprobacion, java.lang.String fechaAsignacion) {
-		this.usuario = usuario;
-		this.actividad = actividad;
-		this.aprobacionFlag = aprobacionFlag;
-		this.aprobacionObs = aprobacionObs;
-		this.fechaAprobacion = fechaAprobacion;
-		this.fechaAsignacion = fechaAsignacion;
-	}
-    
-    @Override
+	@Override
 	public String toString() {
 
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();
 		return gson.toJson(this);
+	}
+
+	public java.lang.String getAprobacionRechazoCausal() {
+		return this.aprobacionRechazoCausal;
+	}
+
+	public void setAprobacionRechazoCausal(
+			java.lang.String aprobacionRechazoCausal) {
+		this.aprobacionRechazoCausal = aprobacionRechazoCausal;
+	}
+
+	public java.lang.String getAprobacionRechazoOtro() {
+		return this.aprobacionRechazoOtro;
+	}
+
+	public void setAprobacionRechazoOtro(java.lang.String aprobacionRechazoOtro) {
+		this.aprobacionRechazoOtro = aprobacionRechazoOtro;
+	}
+
+	public java.lang.String getAprobacionRechazoObs() {
+		return this.aprobacionRechazoObs;
+	}
+
+	public void setAprobacionRechazoObs(java.lang.String aprobacionRechazoObs) {
+		this.aprobacionRechazoObs = aprobacionRechazoObs;
+	}
+
+	public Usuario(java.lang.String usuario, java.lang.String actividad,
+			java.lang.Boolean aprobacionFlag, java.lang.String fechaAprobacion,
+			java.lang.String fechaAsignacion,
+			java.lang.String aprobacionRechazoCausal,
+			java.lang.String aprobacionRechazoOtro,
+			java.lang.String aprobacionRechazoObs) {
+		this.usuario = usuario;
+		this.actividad = actividad;
+		this.aprobacionFlag = aprobacionFlag;
+		this.fechaAprobacion = fechaAprobacion;
+		this.fechaAsignacion = fechaAsignacion;
+		this.aprobacionRechazoCausal = aprobacionRechazoCausal;
+		this.aprobacionRechazoOtro = aprobacionRechazoOtro;
+		this.aprobacionRechazoObs = aprobacionRechazoObs;
 	}
 }
