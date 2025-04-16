@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_D6ve0P1GED2DVa3erl7jmA" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd http://www.omg.org/spec/DD/20100524/DC DC.xsd http://www.omg.org/spec/DD/20100524/DI DI.xsd " exporter="jBPM Process Modeler" exporterVersion="2.0" targetNamespace="http://www.omg.org/bpmn20">
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_ZV28kP1GED2DVa3erl7jmA" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd http://www.omg.org/spec/DD/20100524/DC DC.xsd http://www.omg.org/spec/DD/20100524/DI DI.xsd " exporter="jBPM Process Modeler" exporterVersion="2.0" targetNamespace="http://www.omg.org/bpmn20">
   <bpmn2:itemDefinition id="_idInstanciaProcesoItem" structureRef="String"/>
   <bpmn2:itemDefinition id="_cuentaContratoItem" structureRef="String"/>
   <bpmn2:itemDefinition id="_numRadEntradaItem" structureRef="String"/>
@@ -237,8 +237,8 @@
   <bpmn2:itemDefinition id="__BD7D564D-FE4A-4F98-9DBF-CACD43312A6E_NotCompletedReassignInputXItem" structureRef="Object"/>
   <bpmn2:itemDefinition id="__BD7D564D-FE4A-4F98-9DBF-CACD43312A6E_NotStartedNotifyInputXItem" structureRef="Object"/>
   <bpmn2:itemDefinition id="__BD7D564D-FE4A-4F98-9DBF-CACD43312A6E_NotCompletedNotifyInputXItem" structureRef="Object"/>
-  <bpmn2:collaboration id="_9C9C88EA-6C04-405A-A304-D850247F2367" name="Default Collaboration">
-    <bpmn2:participant id="_C453E58C-94C7-4F16-9DF2-F8CCEF903910" name="Pool Participant" processRef="SGDA_Acueducto.PQRS"/>
+  <bpmn2:collaboration id="_90B67583-AA54-41E9-87A6-FDE1448B6CB3" name="Default Collaboration">
+    <bpmn2:participant id="_B77AE68F-3A31-4476-B173-6A0226E6A927" name="Pool Participant" processRef="SGDA_Acueducto.PQRS"/>
   </bpmn2:collaboration>
   <bpmn2:process id="SGDA_Acueducto.PQRS" drools:packageName="co.com.acueducto.sgda.jbpm.proceso" drools:version="1.0" drools:adHoc="false" name="PQRS" isExecutable="true" processType="Public">
     <bpmn2:extensionElements>
@@ -738,8 +738,8 @@
         <bpmn2:flowNodeRef>_976D5E25-1BD8-49E2-AE7E-B47B1D8E800A</bpmn2:flowNodeRef>
         <bpmn2:flowNodeRef>_BD7D564D-FE4A-4F98-9DBF-CACD43312A6E</bpmn2:flowNodeRef>
         <bpmn2:flowNodeRef>_AA8697DD-5A05-4B8C-B6FA-6BF5555DA3B6</bpmn2:flowNodeRef>
-        <bpmn2:flowNodeRef>_AF22C251-DE50-4EA5-BD7E-C2DAD70428FD</bpmn2:flowNodeRef>
         <bpmn2:flowNodeRef>_DC63D549-FC3B-4B0B-BA5B-B19362A8277D</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>_A30C9060-CE08-45CE-815C-1C3D74A902C9</bpmn2:flowNodeRef>
       </bpmn2:lane>
     </bpmn2:laneSet>
     <bpmn2:sequenceFlow id="_454DE7E7-7C3D-4C2C-9938-DBBA041B2369" sourceRef="_AA8697DD-5A05-4B8C-B6FA-6BF5555DA3B6" targetRef="_DC63D549-FC3B-4B0B-BA5B-B19362A8277D"/>
@@ -785,6 +785,7 @@
         </drools:metaData>
       </bpmn2:extensionElements>
     </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_FF4107B4-A133-4BD1-A22A-43772A22800C" sourceRef="_F7CC40EA-F7AA-4DBB-9BF2-8011D79C93A8" targetRef="_A30C9060-CE08-45CE-815C-1C3D74A902C9"/>
     <bpmn2:sequenceFlow id="_FA3FE2F5-6F20-4BD8-A3C7-D0A23961FEF8" sourceRef="_0E123392-BE6B-4FD0-9F44-283398548C89" targetRef="_5F7EC587-56F5-49D7-A321-9CCC7CB11A20"/>
     <bpmn2:sequenceFlow id="_D598EA11-472E-4101-982E-255468A29A5D" sourceRef="_2FF4A477-A411-466B-B17C-1B32DB70064D" targetRef="_64473346-9F72-4DE5-85CE-2A749F3BCF96">
       <bpmn2:extensionElements>
@@ -838,13 +839,6 @@
         </drools:metaData>
       </bpmn2:extensionElements>
       <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" language="http://www.java.com/java"><![CDATA[return (!proyectarRechazoFlag && proyectarFlag && !usuarioProyectorEsJefe && proyectarAprobadores != null);]]></bpmn2:conditionExpression>
-    </bpmn2:sequenceFlow>
-    <bpmn2:sequenceFlow id="_5CF870FF-8B08-4BBD-B0DB-DC390ABAE510" sourceRef="_F7CC40EA-F7AA-4DBB-9BF2-8011D79C93A8" targetRef="_AF22C251-DE50-4EA5-BD7E-C2DAD70428FD">
-      <bpmn2:extensionElements>
-        <drools:metaData name="isAutoConnection.target">
-          <drools:metaValue><![CDATA[true]]></drools:metaValue>
-        </drools:metaData>
-      </bpmn2:extensionElements>
     </bpmn2:sequenceFlow>
     <bpmn2:sequenceFlow id="_20CAA8DD-95F3-46DE-B5B8-A6298D1D7902" sourceRef="_7A07A0F5-9BBD-4661-A755-3B65D4F69B06" targetRef="_1257AD3A-60C6-4BE1-B021-0492BF655D80">
       <bpmn2:extensionElements>
@@ -1246,6 +1240,15 @@
         </drools:metaData>
       </bpmn2:extensionElements>
     </bpmn2:sequenceFlow>
+    <bpmn2:intermediateThrowEvent id="_A30C9060-CE08-45CE-815C-1C3D74A902C9" name="reasignar">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[reasignar]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_FF4107B4-A133-4BD1-A22A-43772A22800C</bpmn2:incoming>
+      <bpmn2:linkEventDefinition id="_ZWAGgP1GED2DVa3erl7jmA" name="reasignar"/>
+    </bpmn2:intermediateThrowEvent>
     <bpmn2:exclusiveGateway id="_DC63D549-FC3B-4B0B-BA5B-B19362A8277D" gatewayDirection="Converging">
       <bpmn2:incoming>_8C11A781-A63B-4822-B73C-DBD245C77323</bpmn2:incoming>
       <bpmn2:incoming>_454DE7E7-7C3D-4C2C-9938-DBBA041B2369</bpmn2:incoming>
@@ -1309,8 +1312,8 @@
           <bpmn2:to xsi:type="bpmn2:tFormalExpression"><![CDATA[_BD7D564D-FE4A-4F98-9DBF-CACD43312A6E_CommentInputX]]></bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:potentialOwner id="_D62MgP1GED2DVa3erl7jmA">
-        <bpmn2:resourceAssignmentExpression id="_D62Mgf1GED2DVa3erl7jmA">
+      <bpmn2:potentialOwner id="_ZWAtkP1GED2DVa3erl7jmA">
+        <bpmn2:resourceAssignmentExpression id="_ZWAtkf1GED2DVa3erl7jmA">
           <bpmn2:formalExpression>#{usuarioProyector}</bpmn2:formalExpression>
         </bpmn2:resourceAssignmentExpression>
       </bpmn2:potentialOwner>
@@ -1471,7 +1474,7 @@ System.out.printf("[%s] usuariosFirmantesLis size: %d%n", idInstanciaProceso, fi
         </drools:metaData>
       </bpmn2:extensionElements>
       <bpmn2:outgoing>_4D8DEA7C-4197-49F9-BEB6-4A2440316455</bpmn2:outgoing>
-      <bpmn2:linkEventDefinition id="_D62Mgv1GED2DVa3erl7jmA" name="proyectar"/>
+      <bpmn2:linkEventDefinition id="_ZWBUoP1GED2DVa3erl7jmA" name="proyectar"/>
     </bpmn2:intermediateCatchEvent>
     <bpmn2:scriptTask id="_F7CC40EA-F7AA-4DBB-9BF2-8011D79C93A8" name="Enviar Notificación ALT-033: Rechazos Pendientes de Gestión" scriptFormat="http://www.java.com/java">
       <bpmn2:extensionElements>
@@ -1480,7 +1483,7 @@ System.out.printf("[%s] usuariosFirmantesLis size: %d%n", idInstanciaProceso, fi
         </drools:metaData>
       </bpmn2:extensionElements>
       <bpmn2:incoming>_8D79FD24-C555-4741-9B24-22ADA042456F</bpmn2:incoming>
-      <bpmn2:outgoing>_5CF870FF-8B08-4BBD-B0DB-DC390ABAE510</bpmn2:outgoing>
+      <bpmn2:outgoing>_FF4107B4-A133-4BD1-A22A-43772A22800C</bpmn2:outgoing>
       <bpmn2:script>//Seetamos la variable Alerta
 String varAlerta = "ALT-033";
 kcontext.setVariable("alerta", varAlerta);
@@ -1493,7 +1496,7 @@ System.out.printf("[%s] Se actualizo la  alerta a: %s%n", idInstanciaProceso, va
         </drools:metaData>
       </bpmn2:extensionElements>
       <bpmn2:incoming>_FA3FE2F5-6F20-4BD8-A3C7-D0A23961FEF8</bpmn2:incoming>
-      <bpmn2:linkEventDefinition id="_D62zkP1GED2DVa3erl7jmA" name="generar"/>
+      <bpmn2:linkEventDefinition id="_ZWBUof1GED2DVa3erl7jmA" name="generar"/>
     </bpmn2:intermediateThrowEvent>
     <bpmn2:scriptTask id="_64473346-9F72-4DE5-85CE-2A749F3BCF96" name="Actualizar estado EST-006: Pendiente Autorizar" scriptFormat="http://www.java.com/java">
       <bpmn2:extensionElements>
@@ -1528,7 +1531,7 @@ System.out.printf("[%s] Se actualizo el estado a: %s%n", idInstanciaProceso, var
         </drools:metaData>
       </bpmn2:extensionElements>
       <bpmn2:outgoing>_D13B4255-CFDF-46BA-B42B-DEC27D56A20A</bpmn2:outgoing>
-      <bpmn2:linkEventDefinition id="_D62zkf1GED2DVa3erl7jmA" name="rechazo"/>
+      <bpmn2:linkEventDefinition id="_ZWB7sP1GED2DVa3erl7jmA" name="rechazo"/>
     </bpmn2:intermediateCatchEvent>
     <bpmn2:userTask id="_1257AD3A-60C6-4BE1-B021-0492BF655D80" name="Generar Radicado Salida [Radicado: #{numRadEntrada}]">
       <bpmn2:extensionElements>
@@ -1631,8 +1634,8 @@ System.out.printf("[%s] declaracionDocArchivoFlag: %s%n", idInstanciaProceso, de
         <bpmn2:sourceRef>_1257AD3A-60C6-4BE1-B021-0492BF655D80_declaracionDocArchivoFlagOutputX</bpmn2:sourceRef>
         <bpmn2:targetRef>declaracionDocArchivoFlag</bpmn2:targetRef>
       </bpmn2:dataOutputAssociation>
-      <bpmn2:potentialOwner id="_D62zkv1GED2DVa3erl7jmA">
-        <bpmn2:resourceAssignmentExpression id="_D62zk_1GED2DVa3erl7jmA">
+      <bpmn2:potentialOwner id="_ZWB7sf1GED2DVa3erl7jmA">
+        <bpmn2:resourceAssignmentExpression id="_ZWB7sv1GED2DVa3erl7jmA">
           <bpmn2:formalExpression>#{usuarioProyector}</bpmn2:formalExpression>
         </bpmn2:resourceAssignmentExpression>
       </bpmn2:potentialOwner>
@@ -1655,18 +1658,10 @@ System.out.printf("[%s] declaracionDocArchivoFlag: %s%n", idInstanciaProceso, de
         </drools:metaData>
       </bpmn2:extensionElements>
       <bpmn2:outgoing>_F17739E6-F235-410B-BDF1-21C9EBEE1A1E</bpmn2:outgoing>
-      <bpmn2:linkEventDefinition id="_D62zlP1GED2DVa3erl7jmA" name="generar">
-        <bpmn2:source>_D62zkP1GED2DVa3erl7jmA</bpmn2:source>
+      <bpmn2:linkEventDefinition id="_ZWB7s_1GED2DVa3erl7jmA" name="generar">
+        <bpmn2:source>_ZWBUof1GED2DVa3erl7jmA</bpmn2:source>
       </bpmn2:linkEventDefinition>
     </bpmn2:intermediateCatchEvent>
-    <bpmn2:endEvent id="_AF22C251-DE50-4EA5-BD7E-C2DAD70428FD" name="Reasignar">
-      <bpmn2:extensionElements>
-        <drools:metaData name="elementname">
-          <drools:metaValue><![CDATA[Reasignar]]></drools:metaValue>
-        </drools:metaData>
-      </bpmn2:extensionElements>
-      <bpmn2:incoming>_5CF870FF-8B08-4BBD-B0DB-DC390ABAE510</bpmn2:incoming>
-    </bpmn2:endEvent>
     <bpmn2:scriptTask id="_7A07A0F5-9BBD-4661-A755-3B65D4F69B06" name="Enviar Notificación ALT-028: Documento Firmado Para Avanzar" scriptFormat="http://www.java.com/java">
       <bpmn2:extensionElements>
         <drools:metaData name="elementname">
@@ -1864,8 +1859,8 @@ System.out.printf("[%s] proyectarRechazoFecha: %s%n", idInstanciaProceso, proyec
         <bpmn2:sourceRef>_7F6AB922-A394-488B-A65A-A610030C3DBC_proyectarRechazoCausalOutputX</bpmn2:sourceRef>
         <bpmn2:targetRef>proyectarRechazoCausal</bpmn2:targetRef>
       </bpmn2:dataOutputAssociation>
-      <bpmn2:potentialOwner id="_D63aoP1GED2DVa3erl7jmA">
-        <bpmn2:resourceAssignmentExpression id="_D63aof1GED2DVa3erl7jmA">
+      <bpmn2:potentialOwner id="_ZWCiwP1GED2DVa3erl7jmA">
+        <bpmn2:resourceAssignmentExpression id="_ZWCiwf1GED2DVa3erl7jmA">
           <bpmn2:formalExpression>#{usuarioProyector}</bpmn2:formalExpression>
         </bpmn2:resourceAssignmentExpression>
       </bpmn2:potentialOwner>
@@ -1952,7 +1947,7 @@ if(varReasignarUsuarioProyector == null){
     </bpmn2:userTask>
     <bpmn2:intermediateThrowEvent id="_E6A07759-320E-46D1-AEFA-DF12E2F62409">
       <bpmn2:incoming>_C2F732E8-AA83-4A88-A110-041E77942685</bpmn2:incoming>
-      <bpmn2:linkEventDefinition id="_D63aov1GED2DVa3erl7jmA" name=""/>
+      <bpmn2:linkEventDefinition id="_ZWDJ0P1GED2DVa3erl7jmA" name=""/>
     </bpmn2:intermediateThrowEvent>
     <bpmn2:scriptTask id="_8D8DEE5B-FA5C-49E0-8FE8-EDB85D66F215" name="Actulizar usuario proyector" scriptFormat="http://www.java.com/java">
       <bpmn2:extensionElements>
@@ -1976,7 +1971,9 @@ System.out.printf("reasignarUsuarioProyector [%s] ", varReasignarUsuarioProyecto
         </drools:metaData>
       </bpmn2:extensionElements>
       <bpmn2:outgoing>_AEAEB153-9212-424B-B404-A2FFD8B3B4C3</bpmn2:outgoing>
-      <bpmn2:linkEventDefinition id="_D63ao_1GED2DVa3erl7jmA" name="reasignar"/>
+      <bpmn2:linkEventDefinition id="_ZWDJ0f1GED2DVa3erl7jmA" name="reasignar">
+        <bpmn2:source>_ZWAGgP1GED2DVa3erl7jmA</bpmn2:source>
+      </bpmn2:linkEventDefinition>
     </bpmn2:intermediateCatchEvent>
     <bpmn2:startEvent id="_5B2E26A1-1B2F-4E1D-A101-D683A99B4B79" name="Inicio">
       <bpmn2:extensionElements>
@@ -1993,8 +1990,8 @@ System.out.printf("reasignarUsuarioProyector [%s] ", varReasignarUsuarioProyecto
         </drools:metaData>
       </bpmn2:extensionElements>
       <bpmn2:incoming>_B0588810-6697-4C54-B6F4-6D2311F823BB</bpmn2:incoming>
-      <bpmn2:linkEventDefinition id="_D64BsP1GED2DVa3erl7jmA" name="proyectar">
-        <bpmn2:target>_D62Mgv1GED2DVa3erl7jmA</bpmn2:target>
+      <bpmn2:linkEventDefinition id="_ZWDJ0v1GED2DVa3erl7jmA" name="proyectar">
+        <bpmn2:target>_ZWBUoP1GED2DVa3erl7jmA</bpmn2:target>
       </bpmn2:linkEventDefinition>
     </bpmn2:intermediateThrowEvent>
     <bpmn2:scriptTask id="_C5F41FFE-6D5F-47D9-8BF6-A933CE1C30A7" name="Calcular Fecha Vencimiento" scriptFormat="http://www.java.com/java">
@@ -2255,7 +2252,7 @@ System.out.printf("[%s] Se actualizo el estado a: %s%n", idInstanciaProceso, var
         </drools:metaData>
       </bpmn2:extensionElements>
       <bpmn2:outgoing>_B67B162E-7E40-4CA0-9428-A66B50101E6B</bpmn2:outgoing>
-      <bpmn2:linkEventDefinition id="_D64Bsf1GED2DVa3erl7jmA" name="tipificar"/>
+      <bpmn2:linkEventDefinition id="_ZWDw4P1GED2DVa3erl7jmA" name="tipificar"/>
     </bpmn2:intermediateCatchEvent>
     <bpmn2:exclusiveGateway id="_96A6BE11-6683-4144-AD30-0161315F08E6" drools:dg="_E1368A54-3EC2-479C-BBE1-B19682822E96" name="Rechaza Asignación?" gatewayDirection="Diverging" default="_E1368A54-3EC2-479C-BBE1-B19682822E96">
       <bpmn2:extensionElements>
@@ -2597,8 +2594,8 @@ if (!autRechExtempTipFlag && (autRechExtempTipObs == null || autRechExtempTipObs
         <bpmn2:sourceRef>_2D84603E-281A-415D-8AE1-E6F1B9A443EF_autRechExtempTipObsOutputX</bpmn2:sourceRef>
         <bpmn2:targetRef>autRechExtempTipObs</bpmn2:targetRef>
       </bpmn2:dataOutputAssociation>
-      <bpmn2:potentialOwner id="_D64owP1GED2DVa3erl7jmA">
-        <bpmn2:resourceAssignmentExpression id="_D64owf1GED2DVa3erl7jmA">
+      <bpmn2:potentialOwner id="_ZWEX8P1GED2DVa3erl7jmA">
+        <bpmn2:resourceAssignmentExpression id="_ZWEX8f1GED2DVa3erl7jmA">
           <bpmn2:formalExpression>#{tipificarAutUsuario}</bpmn2:formalExpression>
         </bpmn2:resourceAssignmentExpression>
       </bpmn2:potentialOwner>
@@ -2655,8 +2652,8 @@ System.out.printf("[%s] Se actualizo la  alerta a: %s%n", idInstanciaProceso, va
         </drools:metaData>
       </bpmn2:extensionElements>
       <bpmn2:incoming>_127C00F5-2F28-43CC-9E83-767C9B5194CB</bpmn2:incoming>
-      <bpmn2:linkEventDefinition id="_D64owv1GED2DVa3erl7jmA" name="tipificar">
-        <bpmn2:target>_D64Bsf1GED2DVa3erl7jmA</bpmn2:target>
+      <bpmn2:linkEventDefinition id="_ZWEX8v1GED2DVa3erl7jmA" name="tipificar">
+        <bpmn2:target>_ZWDw4P1GED2DVa3erl7jmA</bpmn2:target>
       </bpmn2:linkEventDefinition>
     </bpmn2:intermediateThrowEvent>
     <bpmn2:scriptTask id="_3E040F4A-D37E-41CB-9353-D0CDB9664E32" name="Actualizar estado EST-010: Rechazo Extemporáneo No Aprobado" scriptFormat="http://www.java.com/java">
@@ -2718,8 +2715,8 @@ System.out.printf("[%s] Se actualizo la  alerta a: %s%n", idInstanciaProceso, va
         </drools:metaData>
       </bpmn2:extensionElements>
       <bpmn2:incoming>_413EB415-CC24-434D-B6AB-14DDD0BC68EB</bpmn2:incoming>
-      <bpmn2:linkEventDefinition id="_D64ow_1GED2DVa3erl7jmA" name="rechazo">
-        <bpmn2:target>_D62zkf1GED2DVa3erl7jmA</bpmn2:target>
+      <bpmn2:linkEventDefinition id="_ZWE_AP1GED2DVa3erl7jmA" name="rechazo">
+        <bpmn2:target>_ZWB7sP1GED2DVa3erl7jmA</bpmn2:target>
       </bpmn2:linkEventDefinition>
     </bpmn2:intermediateThrowEvent>
     <bpmn2:scriptTask id="_87E452EB-B269-4404-B31B-573B04434E15" name="Validar Resultado Firmas" scriptFormat="http://www.java.com/java">
@@ -2777,8 +2774,8 @@ System.out.printf("[%s] Se actualizo el estado a: %s%n", idInstanciaProceso, var
         </drools:metaData>
       </bpmn2:extensionElements>
       <bpmn2:incoming>_3513ECD1-3299-4A5C-9E6F-6AC77279849F</bpmn2:incoming>
-      <bpmn2:linkEventDefinition id="_D65P0P1GED2DVa3erl7jmA" name="generar">
-        <bpmn2:target>_D62zlP1GED2DVa3erl7jmA</bpmn2:target>
+      <bpmn2:linkEventDefinition id="_ZWE_Af1GED2DVa3erl7jmA" name="generar">
+        <bpmn2:target>_ZWB7s_1GED2DVa3erl7jmA</bpmn2:target>
       </bpmn2:linkEventDefinition>
     </bpmn2:intermediateThrowEvent>
     <bpmn2:scriptTask id="_A585103A-1686-49B3-82A4-5FCACE393FF2" name="Actualizar estado EST-013: Rechazado para VoBo y/o Firma" scriptFormat="http://www.java.com/java">
@@ -2801,7 +2798,7 @@ System.out.printf("[%s] Se actualizo el estado a: %s%n", idInstanciaProceso, var
         </drools:metaData>
       </bpmn2:extensionElements>
       <bpmn2:outgoing>_121C92AD-8225-4474-B439-C82568F9C620</bpmn2:outgoing>
-      <bpmn2:linkEventDefinition id="_D65P0f1GED2DVa3erl7jmA" name="firmar"/>
+      <bpmn2:linkEventDefinition id="_ZWE_Av1GED2DVa3erl7jmA" name="firmar"/>
     </bpmn2:intermediateCatchEvent>
     <bpmn2:intermediateCatchEvent id="_BCBC947C-EE0B-458C-8131-760A95D3D71A" name="Aprobar">
       <bpmn2:extensionElements>
@@ -2810,7 +2807,7 @@ System.out.printf("[%s] Se actualizo el estado a: %s%n", idInstanciaProceso, var
         </drools:metaData>
       </bpmn2:extensionElements>
       <bpmn2:outgoing>_CEA99EDD-B96B-4A14-B7B1-0D1BEC4FEAFD</bpmn2:outgoing>
-      <bpmn2:linkEventDefinition id="_D65P0v1GED2DVa3erl7jmA" name="aprobar"/>
+      <bpmn2:linkEventDefinition id="_ZWE_A_1GED2DVa3erl7jmA" name="aprobar"/>
     </bpmn2:intermediateCatchEvent>
     <bpmn2:scriptTask id="_74794AE3-D10F-4494-8982-2A548A10F619" name="Actualizar estado EST-013: Rechazado para VoBo y/o Firma" scriptFormat="http://www.java.com/java">
       <bpmn2:extensionElements>
@@ -2833,8 +2830,8 @@ System.out.printf("[%s] Se actualizo el estado a: %s%n", idInstanciaProceso, var
         </drools:metaData>
       </bpmn2:extensionElements>
       <bpmn2:incoming>_5FDFBAC8-763D-427A-B855-33F559EE0EDC</bpmn2:incoming>
-      <bpmn2:linkEventDefinition id="_D65P0_1GED2DVa3erl7jmA" name="rechazo">
-        <bpmn2:target>_D62zkf1GED2DVa3erl7jmA</bpmn2:target>
+      <bpmn2:linkEventDefinition id="_ZWFmEP1GED2DVa3erl7jmA" name="rechazo">
+        <bpmn2:target>_ZWB7sP1GED2DVa3erl7jmA</bpmn2:target>
       </bpmn2:linkEventDefinition>
     </bpmn2:intermediateThrowEvent>
     <bpmn2:intermediateThrowEvent id="_0971232A-2353-40EB-999C-B4143FC14313" name="Firmar">
@@ -2844,8 +2841,8 @@ System.out.printf("[%s] Se actualizo el estado a: %s%n", idInstanciaProceso, var
         </drools:metaData>
       </bpmn2:extensionElements>
       <bpmn2:incoming>_170AC18B-76EC-455D-A25D-C0716C5EC4B2</bpmn2:incoming>
-      <bpmn2:linkEventDefinition id="_D65P1P1GED2DVa3erl7jmA" name="firmar">
-        <bpmn2:target>_D65P0f1GED2DVa3erl7jmA</bpmn2:target>
+      <bpmn2:linkEventDefinition id="_ZWFmEf1GED2DVa3erl7jmA" name="firmar">
+        <bpmn2:target>_ZWE_Av1GED2DVa3erl7jmA</bpmn2:target>
       </bpmn2:linkEventDefinition>
     </bpmn2:intermediateThrowEvent>
     <bpmn2:exclusiveGateway id="_98CD7A67-744D-422B-8BC3-F523BB39F198" drools:dg="_170AC18B-76EC-455D-A25D-C0716C5EC4B2" name="Se asignaron usuarios aprobadores?" gatewayDirection="Diverging" default="_170AC18B-76EC-455D-A25D-C0716C5EC4B2">
@@ -2912,8 +2909,8 @@ kcontext.setVariable("aprobacionApruebaFlag", apruebanTodos);</bpmn2:script>
         </drools:metaData>
       </bpmn2:extensionElements>
       <bpmn2:incoming>_55DF687A-75BC-4634-8C47-4C098855C51D</bpmn2:incoming>
-      <bpmn2:linkEventDefinition id="_D65P1f1GED2DVa3erl7jmA" name="firmar">
-        <bpmn2:target>_D65P0f1GED2DVa3erl7jmA</bpmn2:target>
+      <bpmn2:linkEventDefinition id="_ZWFmEv1GED2DVa3erl7jmA" name="firmar">
+        <bpmn2:target>_ZWE_Av1GED2DVa3erl7jmA</bpmn2:target>
       </bpmn2:linkEventDefinition>
     </bpmn2:intermediateThrowEvent>
     <bpmn2:intermediateThrowEvent id="_EAD94E4E-51EE-4C6E-A87B-D1C3A0B6DB13" name="Aprobar">
@@ -2923,8 +2920,8 @@ kcontext.setVariable("aprobacionApruebaFlag", apruebanTodos);</bpmn2:script>
         </drools:metaData>
       </bpmn2:extensionElements>
       <bpmn2:incoming>_04104445-31D9-4BC8-8010-88920465EE83</bpmn2:incoming>
-      <bpmn2:linkEventDefinition id="_D65P1v1GED2DVa3erl7jmA" name="aprobar">
-        <bpmn2:target>_D65P0v1GED2DVa3erl7jmA</bpmn2:target>
+      <bpmn2:linkEventDefinition id="_ZWFmE_1GED2DVa3erl7jmA" name="aprobar">
+        <bpmn2:target>_ZWE_A_1GED2DVa3erl7jmA</bpmn2:target>
       </bpmn2:linkEventDefinition>
     </bpmn2:intermediateThrowEvent>
     <bpmn2:scriptTask id="_51FFF808-803A-4476-9FBA-35281E5637F2" name="Validar Resultado Revisión" scriptFormat="http://www.java.com/java">
@@ -2971,8 +2968,8 @@ System.out.printf("[%s] Se actualizo el estado a: %s%n", idInstanciaProceso, var
         </drools:metaData>
       </bpmn2:extensionElements>
       <bpmn2:incoming>_2EE6F9C7-6B1E-4824-A12A-F194C812A847</bpmn2:incoming>
-      <bpmn2:linkEventDefinition id="_D6524P1GED2DVa3erl7jmA" name="aprobar">
-        <bpmn2:target>_D65P0v1GED2DVa3erl7jmA</bpmn2:target>
+      <bpmn2:linkEventDefinition id="_ZWFmFP1GED2DVa3erl7jmA" name="aprobar">
+        <bpmn2:target>_ZWE_A_1GED2DVa3erl7jmA</bpmn2:target>
       </bpmn2:linkEventDefinition>
     </bpmn2:intermediateThrowEvent>
     <bpmn2:intermediateThrowEvent id="_4E3D948B-7277-4999-93DB-88FAF64CFA33" name="Gestionar Rechazo">
@@ -2982,8 +2979,8 @@ System.out.printf("[%s] Se actualizo el estado a: %s%n", idInstanciaProceso, var
         </drools:metaData>
       </bpmn2:extensionElements>
       <bpmn2:incoming>_0199EFD1-F10E-47B3-B473-E58295047EB8</bpmn2:incoming>
-      <bpmn2:linkEventDefinition id="_D6524f1GED2DVa3erl7jmA" name="rechazo">
-        <bpmn2:target>_D62zkf1GED2DVa3erl7jmA</bpmn2:target>
+      <bpmn2:linkEventDefinition id="_ZWFmFf1GED2DVa3erl7jmA" name="rechazo">
+        <bpmn2:target>_ZWB7sP1GED2DVa3erl7jmA</bpmn2:target>
       </bpmn2:linkEventDefinition>
     </bpmn2:intermediateThrowEvent>
     <bpmn2:exclusiveGateway id="_E330E127-E265-43C8-BE17-C93E2BAE5197" name="Revisión Aprobada?" gatewayDirection="Diverging">
@@ -3238,8 +3235,8 @@ System.out.printf("[%s] apruebaRechazoOtro: %s%n", idInstanciaProceso, apruebaRe
           <bpmn2:sourceRef>_2A7B94DF-AFB7-4BE2-951D-7BBC9459CCBA_apruebaRechazoOtroOutputX</bpmn2:sourceRef>
           <bpmn2:targetRef>apruebaRechazoOtro</bpmn2:targetRef>
         </bpmn2:dataOutputAssociation>
-        <bpmn2:potentialOwner id="_D66d8P1GED2DVa3erl7jmA">
-          <bpmn2:resourceAssignmentExpression id="_D66d8f1GED2DVa3erl7jmA">
+        <bpmn2:potentialOwner id="_ZWG0MP1GED2DVa3erl7jmA">
+          <bpmn2:resourceAssignmentExpression id="_ZWG0Mf1GED2DVa3erl7jmA">
             <bpmn2:formalExpression>#{usuarioAprobador}</bpmn2:formalExpression>
           </bpmn2:resourceAssignmentExpression>
         </bpmn2:potentialOwner>
@@ -3483,8 +3480,8 @@ System.out.printf("[%s] apruebaRechazoOtro: %s%n", idInstanciaProceso, apruebaRe
           <bpmn2:sourceRef>_00B3927F-49DD-46FE-B38F-4AB51D2B954D_apruebaRechazoOtroOutputX</bpmn2:sourceRef>
           <bpmn2:targetRef>apruebaRechazoOtro</bpmn2:targetRef>
         </bpmn2:dataOutputAssociation>
-        <bpmn2:potentialOwner id="_D66d8v1GED2DVa3erl7jmA">
-          <bpmn2:resourceAssignmentExpression id="_D67FAP1GED2DVa3erl7jmA">
+        <bpmn2:potentialOwner id="_ZWHbQP1GED2DVa3erl7jmA">
+          <bpmn2:resourceAssignmentExpression id="_ZWHbQf1GED2DVa3erl7jmA">
             <bpmn2:formalExpression>#{usuarioAprobador}</bpmn2:formalExpression>
           </bpmn2:resourceAssignmentExpression>
         </bpmn2:potentialOwner>
@@ -3795,8 +3792,8 @@ System.out.printf("[%s] apruebaRechazoOtro: %s%n", idInstanciaProceso, apruebaRe
           <bpmn2:sourceRef>_831C4EE7-7533-42BF-9818-A3D53DF789BA_apruebaRechazoOtroOutputX</bpmn2:sourceRef>
           <bpmn2:targetRef>apruebaRechazoOtro</bpmn2:targetRef>
         </bpmn2:dataOutputAssociation>
-        <bpmn2:potentialOwner id="_D67FAf1GED2DVa3erl7jmA">
-          <bpmn2:resourceAssignmentExpression id="_D67FAv1GED2DVa3erl7jmA">
+        <bpmn2:potentialOwner id="_ZWICUP1GED2DVa3erl7jmA">
+          <bpmn2:resourceAssignmentExpression id="_ZWICUf1GED2DVa3erl7jmA">
             <bpmn2:formalExpression>#{usuarioAprobador}</bpmn2:formalExpression>
           </bpmn2:resourceAssignmentExpression>
         </bpmn2:potentialOwner>
@@ -4078,9 +4075,6 @@ System.out.printf("[%s] apruebaRechazoOtro: %s%n", idInstanciaProceso, apruebaRe
       <bpmndi:BPMNShape id="shape__7A07A0F5-9BBD-4661-A755-3B65D4F69B06" bpmnElement="_7A07A0F5-9BBD-4661-A755-3B65D4F69B06">
         <dc:Bounds height="106" width="187" x="6453.625" y="1724.3335"/>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="shape__AF22C251-DE50-4EA5-BD7E-C2DAD70428FD" bpmnElement="_AF22C251-DE50-4EA5-BD7E-C2DAD70428FD">
-        <dc:Bounds height="56" width="56" x="4387" y="1168"/>
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="shape__913CF2CF-A5AB-471F-A436-180F942E486D" bpmnElement="_913CF2CF-A5AB-471F-A436-180F942E486D">
         <dc:Bounds height="56" width="56" x="6196.625" y="1747.3335"/>
       </bpmndi:BPMNShape>
@@ -4146,6 +4140,9 @@ System.out.printf("[%s] apruebaRechazoOtro: %s%n", idInstanciaProceso, apruebaRe
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="shape__DC63D549-FC3B-4B0B-BA5B-B19362A8277D" bpmnElement="_DC63D549-FC3B-4B0B-BA5B-B19362A8277D">
         <dc:Bounds height="56" width="56" x="2454" y="1366"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape__A30C9060-CE08-45CE-815C-1C3D74A902C9" bpmnElement="_A30C9060-CE08-45CE-815C-1C3D74A902C9">
+        <dc:Bounds height="56" width="56" x="4283" y="1167"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="shape__AB6D8E2C-9CD4-4E9D-ACCB-DFC2267A2A37" bpmnElement="_AB6D8E2C-9CD4-4E9D-ACCB-DFC2267A2A37">
         <dc:Bounds height="569.1667499999999" width="2850" x="3371" y="2201.8333"/>
@@ -4428,10 +4425,6 @@ System.out.printf("[%s] apruebaRechazoOtro: %s%n", idInstanciaProceso, apruebaRe
         <di:waypoint x="6547.125" y="1777.3335"/>
         <di:waypoint x="6833" y="1778.375"/>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="edge_shape__F7CC40EA-F7AA-4DBB-9BF2-8011D79C93A8_to_shape__AF22C251-DE50-4EA5-BD7E-C2DAD70428FD" bpmnElement="_5CF870FF-8B08-4BBD-B0DB-DC390ABAE510">
-        <di:waypoint x="4051" y="1195.5"/>
-        <di:waypoint x="4489" y="1168"/>
-      </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="edge_shape__317FCDD0-CA3C-40AB-A699-B37178DFA6CD_to_shape__14A00A90-17F7-4A91-8E6F-331ECF810450" bpmnElement="_EBD47E81-3715-4B3B-B107-BB9F52891CA9">
         <di:waypoint x="3025.875" y="1395.3335"/>
         <di:waypoint x="2813.7495" y="1639.5421"/>
@@ -4476,6 +4469,10 @@ System.out.printf("[%s] apruebaRechazoOtro: %s%n", idInstanciaProceso, apruebaRe
       <bpmndi:BPMNEdge id="edge_shape__0E123392-BE6B-4FD0-9F44-283398548C89_to_shape__5F7EC587-56F5-49D7-A321-9CCC7CB11A20" bpmnElement="_FA3FE2F5-6F20-4BD8-A3C7-D0A23961FEF8">
         <di:waypoint x="3315.5" y="1780"/>
         <di:waypoint x="3659.5" y="1777"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape__F7CC40EA-F7AA-4DBB-9BF2-8011D79C93A8_to_shape__A30C9060-CE08-45CE-815C-1C3D74A902C9" bpmnElement="_FF4107B4-A133-4BD1-A22A-43772A22800C">
+        <di:waypoint x="4051" y="1195.5"/>
+        <di:waypoint x="4283" y="1195"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="edge_shape__0897BE60-1135-4310-A693-E63348769D9B_to_shape__C51EF369-8AD6-472D-8BE3-2280A81DA9E0" bpmnElement="_4D8DEA7C-4197-49F9-BEB6-4A2440316455">
         <di:waypoint x="1650.375" y="1395.3335"/>
@@ -5354,7 +5351,7 @@ System.out.printf("[%s] apruebaRechazoOtro: %s%n", idInstanciaProceso, apruebaRe
         </bpsim:Scenario>
       </bpsim:BPSimData>
     </bpmn2:extensionElements>
-    <bpmn2:source>_D6ve0P1GED2DVa3erl7jmA</bpmn2:source>
-    <bpmn2:target>_D6ve0P1GED2DVa3erl7jmA</bpmn2:target>
+    <bpmn2:source>_ZV28kP1GED2DVa3erl7jmA</bpmn2:source>
+    <bpmn2:target>_ZV28kP1GED2DVa3erl7jmA</bpmn2:target>
   </bpmn2:relationship>
 </bpmn2:definitions>
