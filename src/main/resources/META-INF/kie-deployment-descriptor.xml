@@ -29,7 +29,13 @@
         </global>
     </globals>
     
-    
+    <work-item-handlers>
+        <work-item-handler>
+    <name>Rest</name>
+    <resolver>reflection</resolver>
+    <identifier>org.jbpm.process.workitem.rest.RESTWorkItemHandler</identifier>
+</work-item-handler>
+    </work-item-handlers>
     
     <environment-entries/>
     <configurations/>
