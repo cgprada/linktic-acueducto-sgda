@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<deployment-descriptor xsi:schemaLocation="http://www.jboss.org/jbpm deployment-descriptor.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<deployment-descriptor
+    xmlns="http://www.drools.org/xsd/kie-deployment-descriptor"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.drools.org/xsd/kie-deployment-descriptor kie-deployment-descriptor.xsd">
+
     <persistence-unit>org.jbpm.domain</persistence-unit>
     <audit-persistence-unit>org.jbpm.domain</audit-persistence-unit>
     <audit-mode>JPA</audit-mode>
     <persistence-mode>JPA</persistence-mode>
     <runtime-strategy>PER_PROCESS_INSTANCE</runtime-strategy>
+
     <marshalling-strategies/>
     <event-listeners/>
     <task-event-listeners/>
+
     <globals>
         <global>
             <resolver>mvel</resolver>
@@ -36,7 +42,7 @@
             <identifier>new org.jbpm.process.workitem.rest.RESTWorkItemHandler()</identifier>
         </work-item-handler>
     </work-item-handlers>
-   
+
     <environment-entries/>
     <configurations/>
     <required-roles/>
