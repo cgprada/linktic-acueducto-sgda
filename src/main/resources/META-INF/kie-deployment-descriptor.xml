@@ -28,7 +28,15 @@
             <name>gDuracionRechazoTipificador</name>
         </global>
     </globals>
-    <work-item-handlers/>
+
+    <work-item-handlers>
+        <work-item-handler>
+            <name>Rest</name>
+            <resolver>mvel</resolver>
+            <identifier>new org.jbpm.process.workitem.rest.RESTWorkItemHandler()</identifier>
+        </work-item-handler>
+    </work-item-handlers>
+   
     <environment-entries/>
     <configurations/>
     <required-roles/>
