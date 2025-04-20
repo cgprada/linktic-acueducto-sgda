@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_k4ewUABpED6yauvTguNpzQ" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd http://www.omg.org/spec/DD/20100524/DC DC.xsd http://www.omg.org/spec/DD/20100524/DI DI.xsd " exporter="jBPM Process Modeler" exporterVersion="2.0" targetNamespace="http://www.omg.org/bpmn20">
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_V9IV4ABqED6yauvTguNpzQ" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd http://www.omg.org/spec/DD/20100524/DC DC.xsd http://www.omg.org/spec/DD/20100524/DI DI.xsd " exporter="jBPM Process Modeler" exporterVersion="2.0" targetNamespace="http://www.omg.org/bpmn20">
   <bpmn2:itemDefinition id="_idInstanciaProcesoItem" structureRef="String"/>
   <bpmn2:itemDefinition id="_cuentaContratoItem" structureRef="String"/>
   <bpmn2:itemDefinition id="_numRadEntradaItem" structureRef="String"/>
@@ -257,8 +257,8 @@
   <bpmn2:itemDefinition id="__651A4F02-4ABE-44FD-A1F8-6FFCB9A2F762_ReadTimeoutInputXItem" structureRef="String"/>
   <bpmn2:itemDefinition id="__651A4F02-4ABE-44FD-A1F8-6FFCB9A2F762_ResultClassInputXItem" structureRef="String"/>
   <bpmn2:itemDefinition id="__651A4F02-4ABE-44FD-A1F8-6FFCB9A2F762_ResultOutputXItem" structureRef="String"/>
-  <bpmn2:collaboration id="_CFD4242E-9C69-4A0C-AF39-657BA426ECCD" name="Default Collaboration">
-    <bpmn2:participant id="_AAEF7160-5D5D-408C-A0EE-C3D671037F46" name="Pool Participant" processRef="SGDA_Acueducto.PQRS"/>
+  <bpmn2:collaboration id="_3C783F24-29BE-4ACB-8F95-554BA82754D7" name="Default Collaboration">
+    <bpmn2:participant id="_3825A5AC-BE27-421D-BC50-48EACB007B1E" name="Pool Participant" processRef="SGDA_Acueducto.PQRS"/>
   </bpmn2:collaboration>
   <bpmn2:process id="SGDA_Acueducto.PQRS" drools:packageName="co.com.acueducto.sgda.jbpm.proceso" drools:version="1.0" drools:adHoc="false" name="PQRS" isExecutable="true" processType="Public">
     <bpmn2:extensionElements>
@@ -775,11 +775,19 @@
         <bpmn2:flowNodeRef>_BD7D564D-FE4A-4F98-9DBF-CACD43312A6E</bpmn2:flowNodeRef>
         <bpmn2:flowNodeRef>_976D5E25-1BD8-49E2-AE7E-B47B1D8E800A</bpmn2:flowNodeRef>
         <bpmn2:flowNodeRef>_651A4F02-4ABE-44FD-A1F8-6FFCB9A2F762</bpmn2:flowNodeRef>
-        <bpmn2:flowNodeRef>_BC3EF5A6-483F-406E-8DB8-374EA35A9B1A</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>_C3B2636E-A03F-42F2-BE44-32B190E772C4</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>_E1AF4E02-6CDA-49CE-A146-9C917BE8FF95</bpmn2:flowNodeRef>
       </bpmn2:lane>
     </bpmn2:laneSet>
-    <bpmn2:sequenceFlow id="_4A5802D5-1BE9-4A5E-AB0E-BA6F587C604F" sourceRef="_BC3EF5A6-483F-406E-8DB8-374EA35A9B1A" targetRef="_651A4F02-4ABE-44FD-A1F8-6FFCB9A2F762"/>
-    <bpmn2:sequenceFlow id="_D8A49738-F7AC-4007-9BA1-D5BC7EE532B0" sourceRef="_651A4F02-4ABE-44FD-A1F8-6FFCB9A2F762" targetRef="_C51EF369-8AD6-472D-8BE3-2280A81DA9E0"/>
+    <bpmn2:sequenceFlow id="_FA42CF34-8897-489D-9B3B-46206E816543" sourceRef="_651A4F02-4ABE-44FD-A1F8-6FFCB9A2F762" targetRef="_C3B2636E-A03F-42F2-BE44-32B190E772C4"/>
+    <bpmn2:sequenceFlow id="_7EF51FB5-4C7D-4671-89AC-52F33A975DCB" sourceRef="_E1AF4E02-6CDA-49CE-A146-9C917BE8FF95" targetRef="_651A4F02-4ABE-44FD-A1F8-6FFCB9A2F762">
+      <bpmn2:extensionElements>
+        <drools:metaData name="isAutoConnection.target">
+          <drools:metaValue><![CDATA[true]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_4FB79C9A-BEAB-4C15-88BA-D9046B70EEBA" sourceRef="_C3B2636E-A03F-42F2-BE44-32B190E772C4" targetRef="_C51EF369-8AD6-472D-8BE3-2280A81DA9E0"/>
     <bpmn2:sequenceFlow id="_D3EF5BA2-6422-417F-B70A-02857B89A6A2" sourceRef="_BC9D69D9-CD1F-4BD2-BCF8-FE10A29EC48E" targetRef="_976D5E25-1BD8-49E2-AE7E-B47B1D8E800A"/>
     <bpmn2:sequenceFlow id="_FF0B9D54-F4FB-480B-9267-4AECBFDEE68D" name="Traslado por competencia" sourceRef="_7EFEBC00-782B-4F6F-AA01-EB356F8ED782" targetRef="_BC9D69D9-CD1F-4BD2-BCF8-FE10A29EC48E">
       <bpmn2:extensionElements>
@@ -814,7 +822,7 @@
         </drools:metaData>
       </bpmn2:extensionElements>
     </bpmn2:sequenceFlow>
-    <bpmn2:sequenceFlow id="_05B280EC-7EED-40FC-8065-D6A281226A5E" sourceRef="_0897BE60-1135-4310-A693-E63348769D9B" targetRef="_C51EF369-8AD6-472D-8BE3-2280A81DA9E0"/>
+    <bpmn2:sequenceFlow id="_4D8DEA7C-4197-49F9-BEB6-4A2440316455" sourceRef="_0897BE60-1135-4310-A693-E63348769D9B" targetRef="_C3B2636E-A03F-42F2-BE44-32B190E772C4"/>
     <bpmn2:sequenceFlow id="_FF4107B4-A133-4BD1-A22A-43772A22800C" sourceRef="_F7CC40EA-F7AA-4DBB-9BF2-8011D79C93A8" targetRef="_A30C9060-CE08-45CE-815C-1C3D74A902C9"/>
     <bpmn2:sequenceFlow id="_D598EA11-472E-4101-982E-255468A29A5D" sourceRef="_2FF4A477-A411-466B-B17C-1B32DB70064D" targetRef="_64473346-9F72-4DE5-85CE-2A749F3BCF96">
       <bpmn2:extensionElements>
@@ -1276,15 +1284,20 @@
       <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" language="http://www.java.com/java"><![CDATA[return usuariosRevisoresList != null && usuariosRevisoresList.size() > 0;]]></bpmn2:conditionExpression>
     </bpmn2:sequenceFlow>
     <bpmn2:sequenceFlow id="_CCBAF7D5-97B1-4EA3-8D66-01D5173CCD6D" sourceRef="_64473346-9F72-4DE5-85CE-2A749F3BCF96" targetRef="_85AA06B4-B224-4281-9C06-09706908D22E"/>
-    <bpmn2:intermediateCatchEvent id="_BC3EF5A6-483F-406E-8DB8-374EA35A9B1A" name="reasginar proyector">
+    <bpmn2:intermediateCatchEvent id="_E1AF4E02-6CDA-49CE-A146-9C917BE8FF95" name="reasginar proyectar">
       <bpmn2:extensionElements>
         <drools:metaData name="elementname">
-          <drools:metaValue><![CDATA[reasginar proyector]]></drools:metaValue>
+          <drools:metaValue><![CDATA[reasginar proyectar]]></drools:metaValue>
         </drools:metaData>
       </bpmn2:extensionElements>
-      <bpmn2:outgoing>_4A5802D5-1BE9-4A5E-AB0E-BA6F587C604F</bpmn2:outgoing>
-      <bpmn2:linkEventDefinition id="_k4leAABpED6yauvTguNpzQ" name="reasignar proyector"/>
+      <bpmn2:outgoing>_7EF51FB5-4C7D-4671-89AC-52F33A975DCB</bpmn2:outgoing>
+      <bpmn2:linkEventDefinition id="_V9OcgABqED6yauvTguNpzQ" name="reasignar proyectar"/>
     </bpmn2:intermediateCatchEvent>
+    <bpmn2:exclusiveGateway id="_C3B2636E-A03F-42F2-BE44-32B190E772C4" gatewayDirection="Converging">
+      <bpmn2:incoming>_4D8DEA7C-4197-49F9-BEB6-4A2440316455</bpmn2:incoming>
+      <bpmn2:incoming>_FA42CF34-8897-489D-9B3B-46206E816543</bpmn2:incoming>
+      <bpmn2:outgoing>_4FB79C9A-BEAB-4C15-88BA-D9046B70EEBA</bpmn2:outgoing>
+    </bpmn2:exclusiveGateway>
     <bpmn2:task id="_651A4F02-4ABE-44FD-A1F8-6FFCB9A2F762" drools:taskName="Rest" name="Released task">
       <bpmn2:documentation><![CDATA[jbpm-workitems-rest/index.html]]></bpmn2:documentation>
       <bpmn2:extensionElements>
@@ -1292,8 +1305,8 @@
           <drools:metaValue><![CDATA[Released task]]></drools:metaValue>
         </drools:metaData>
       </bpmn2:extensionElements>
-      <bpmn2:incoming>_4A5802D5-1BE9-4A5E-AB0E-BA6F587C604F</bpmn2:incoming>
-      <bpmn2:outgoing>_D8A49738-F7AC-4007-9BA1-D5BC7EE532B0</bpmn2:outgoing>
+      <bpmn2:incoming>_7EF51FB5-4C7D-4671-89AC-52F33A975DCB</bpmn2:incoming>
+      <bpmn2:outgoing>_FA42CF34-8897-489D-9B3B-46206E816543</bpmn2:outgoing>
       <bpmn2:ioSpecification>
         <bpmn2:dataInput id="_651A4F02-4ABE-44FD-A1F8-6FFCB9A2F762_MethodInputX" drools:dtype="String" itemSubjectRef="__651A4F02-4ABE-44FD-A1F8-6FFCB9A2F762_MethodInputXItem" name="Method"/>
         <bpmn2:dataInput id="_651A4F02-4ABE-44FD-A1F8-6FFCB9A2F762_PasswordInputX" drools:dtype="String" itemSubjectRef="__651A4F02-4ABE-44FD-A1F8-6FFCB9A2F762_PasswordInputXItem" name="Password"/>
@@ -1432,8 +1445,8 @@
           <bpmn2:to xsi:type="bpmn2:tFormalExpression"><![CDATA[_BD7D564D-FE4A-4F98-9DBF-CACD43312A6E_CommentInputX]]></bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:potentialOwner id="_k4msIABpED6yauvTguNpzQ">
-        <bpmn2:resourceAssignmentExpression id="_k4msIQBpED6yauvTguNpzQ">
+      <bpmn2:potentialOwner id="_V9PDkABqED6yauvTguNpzQ">
+        <bpmn2:resourceAssignmentExpression id="_V9PDkQBqED6yauvTguNpzQ">
           <bpmn2:formalExpression>#{usuarioProyector}</bpmn2:formalExpression>
         </bpmn2:resourceAssignmentExpression>
       </bpmn2:potentialOwner>
@@ -1444,8 +1457,7 @@
           <drools:metaValue><![CDATA[Actualizar estado EST-002: Asignado para Gestión]]></drools:metaValue>
         </drools:metaData>
       </bpmn2:extensionElements>
-      <bpmn2:incoming>_05B280EC-7EED-40FC-8065-D6A281226A5E</bpmn2:incoming>
-      <bpmn2:incoming>_D8A49738-F7AC-4007-9BA1-D5BC7EE532B0</bpmn2:incoming>
+      <bpmn2:incoming>_4FB79C9A-BEAB-4C15-88BA-D9046B70EEBA</bpmn2:incoming>
       <bpmn2:outgoing>_35157CE1-B63A-4296-9B0D-0F884C59B5C2</bpmn2:outgoing>
       <bpmn2:script>//Seteamos el estado EST-003
 kcontext.setVariable("estado", "EST-002");
@@ -1604,7 +1616,7 @@ System.out.printf("[%s] Se actualizo el estado a: %s%n", idInstanciaProceso, var
         </drools:metaData>
       </bpmn2:extensionElements>
       <bpmn2:incoming>_FF4107B4-A133-4BD1-A22A-43772A22800C</bpmn2:incoming>
-      <bpmn2:linkEventDefinition id="_k4nTMABpED6yauvTguNpzQ" name="reasignar"/>
+      <bpmn2:linkEventDefinition id="_V9PqoABqED6yauvTguNpzQ" name="reasignar"/>
     </bpmn2:intermediateThrowEvent>
     <bpmn2:exclusiveGateway id="_DC63D549-FC3B-4B0B-BA5B-B19362A8277D" gatewayDirection="Converging">
       <bpmn2:incoming>_454DE7E7-7C3D-4C2C-9938-DBBA041B2369</bpmn2:incoming>
@@ -1617,8 +1629,8 @@ System.out.printf("[%s] Se actualizo el estado a: %s%n", idInstanciaProceso, var
           <drools:metaValue><![CDATA[Proyectar]]></drools:metaValue>
         </drools:metaData>
       </bpmn2:extensionElements>
-      <bpmn2:outgoing>_05B280EC-7EED-40FC-8065-D6A281226A5E</bpmn2:outgoing>
-      <bpmn2:linkEventDefinition id="_k4nTMQBpED6yauvTguNpzQ" name="proyectar"/>
+      <bpmn2:outgoing>_4D8DEA7C-4197-49F9-BEB6-4A2440316455</bpmn2:outgoing>
+      <bpmn2:linkEventDefinition id="_V9PqoQBqED6yauvTguNpzQ" name="proyectar"/>
     </bpmn2:intermediateCatchEvent>
     <bpmn2:scriptTask id="_F7CC40EA-F7AA-4DBB-9BF2-8011D79C93A8" name="Enviar Notificación ALT-033: Rechazos Pendientes de Gestión" scriptFormat="http://www.java.com/java">
       <bpmn2:extensionElements>
@@ -1653,7 +1665,7 @@ System.out.printf("[%s] Se actualizo el estado a: %s%n", idInstanciaProceso, var
         </drools:metaData>
       </bpmn2:extensionElements>
       <bpmn2:incoming>_FA3FE2F5-6F20-4BD8-A3C7-D0A23961FEF8</bpmn2:incoming>
-      <bpmn2:linkEventDefinition id="_k4nTMgBpED6yauvTguNpzQ" name="generar"/>
+      <bpmn2:linkEventDefinition id="_V9PqogBqED6yauvTguNpzQ" name="generar"/>
     </bpmn2:intermediateThrowEvent>
     <bpmn2:scriptTask id="_1A8B791B-5C8E-471C-AD33-2046E84B0F97" name="Actualizar estado EST-017: Rechazado" scriptFormat="http://www.java.com/java">
       <bpmn2:extensionElements>
@@ -1675,7 +1687,7 @@ System.out.printf("[%s] Se actualizo el estado a: %s%n", idInstanciaProceso, var
         </drools:metaData>
       </bpmn2:extensionElements>
       <bpmn2:outgoing>_D13B4255-CFDF-46BA-B42B-DEC27D56A20A</bpmn2:outgoing>
-      <bpmn2:linkEventDefinition id="_k4nTMwBpED6yauvTguNpzQ" name="rechazo"/>
+      <bpmn2:linkEventDefinition id="_V9PqowBqED6yauvTguNpzQ" name="rechazo"/>
     </bpmn2:intermediateCatchEvent>
     <bpmn2:userTask id="_1257AD3A-60C6-4BE1-B021-0492BF655D80" name="Generar Radicado Salida [Radicado: #{numRadEntrada}]">
       <bpmn2:extensionElements>
@@ -1778,8 +1790,8 @@ System.out.printf("[%s] declaracionDocArchivoFlag: %s%n", idInstanciaProceso, de
         <bpmn2:sourceRef>_1257AD3A-60C6-4BE1-B021-0492BF655D80_declaracionDocArchivoFlagOutputX</bpmn2:sourceRef>
         <bpmn2:targetRef>declaracionDocArchivoFlag</bpmn2:targetRef>
       </bpmn2:dataOutputAssociation>
-      <bpmn2:potentialOwner id="_k4n6QABpED6yauvTguNpzQ">
-        <bpmn2:resourceAssignmentExpression id="_k4n6QQBpED6yauvTguNpzQ">
+      <bpmn2:potentialOwner id="_V9QRsABqED6yauvTguNpzQ">
+        <bpmn2:resourceAssignmentExpression id="_V9QRsQBqED6yauvTguNpzQ">
           <bpmn2:formalExpression>#{usuarioProyector}</bpmn2:formalExpression>
         </bpmn2:resourceAssignmentExpression>
       </bpmn2:potentialOwner>
@@ -1802,8 +1814,8 @@ System.out.printf("[%s] declaracionDocArchivoFlag: %s%n", idInstanciaProceso, de
         </drools:metaData>
       </bpmn2:extensionElements>
       <bpmn2:outgoing>_F17739E6-F235-410B-BDF1-21C9EBEE1A1E</bpmn2:outgoing>
-      <bpmn2:linkEventDefinition id="_k4n6QgBpED6yauvTguNpzQ" name="generar">
-        <bpmn2:source>_k4nTMgBpED6yauvTguNpzQ</bpmn2:source>
+      <bpmn2:linkEventDefinition id="_V9QRsgBqED6yauvTguNpzQ" name="generar">
+        <bpmn2:source>_V9PqogBqED6yauvTguNpzQ</bpmn2:source>
       </bpmn2:linkEventDefinition>
     </bpmn2:intermediateCatchEvent>
     <bpmn2:scriptTask id="_7A07A0F5-9BBD-4661-A755-3B65D4F69B06" name="Enviar Notificación ALT-028: Documento Firmado Para Avanzar" scriptFormat="http://www.java.com/java">
@@ -2017,8 +2029,8 @@ System.out.printf("[%s] proyectarRechazoFecha: %s%n", idInstanciaProceso, proyec
         <bpmn2:sourceRef>_7F6AB922-A394-488B-A65A-A610030C3DBC_proyectarRechazoCausalOutputX</bpmn2:sourceRef>
         <bpmn2:targetRef>proyectarRechazoCausal</bpmn2:targetRef>
       </bpmn2:dataOutputAssociation>
-      <bpmn2:potentialOwner id="_k4ohUABpED6yauvTguNpzQ">
-        <bpmn2:resourceAssignmentExpression id="_k4ohUQBpED6yauvTguNpzQ">
+      <bpmn2:potentialOwner id="_V9QRswBqED6yauvTguNpzQ">
+        <bpmn2:resourceAssignmentExpression id="_V9QRtABqED6yauvTguNpzQ">
           <bpmn2:formalExpression>#{usuarioProyector}</bpmn2:formalExpression>
         </bpmn2:resourceAssignmentExpression>
       </bpmn2:potentialOwner>
@@ -2063,8 +2075,8 @@ System.out.printf("reasignarUsuarioProyector [%s] ", varReasignarUsuarioProyecto
         </drools:metaData>
       </bpmn2:extensionElements>
       <bpmn2:outgoing>_AEAEB153-9212-424B-B404-A2FFD8B3B4C3</bpmn2:outgoing>
-      <bpmn2:linkEventDefinition id="_k4ohUgBpED6yauvTguNpzQ" name="reasignar">
-        <bpmn2:source>_k4nTMABpED6yauvTguNpzQ</bpmn2:source>
+      <bpmn2:linkEventDefinition id="_V9Q4wABqED6yauvTguNpzQ" name="reasignar">
+        <bpmn2:source>_V9PqoABqED6yauvTguNpzQ</bpmn2:source>
       </bpmn2:linkEventDefinition>
     </bpmn2:intermediateCatchEvent>
     <bpmn2:intermediateThrowEvent id="_9ED916CA-2543-4994-849A-EA6C7468B027" name="Proyectar">
@@ -2074,8 +2086,8 @@ System.out.printf("reasignarUsuarioProyector [%s] ", varReasignarUsuarioProyecto
         </drools:metaData>
       </bpmn2:extensionElements>
       <bpmn2:incoming>_B0588810-6697-4C54-B6F4-6D2311F823BB</bpmn2:incoming>
-      <bpmn2:linkEventDefinition id="_k4ohUwBpED6yauvTguNpzQ" name="proyectar">
-        <bpmn2:target>_k4nTMQBpED6yauvTguNpzQ</bpmn2:target>
+      <bpmn2:linkEventDefinition id="_V9Q4wQBqED6yauvTguNpzQ" name="proyectar">
+        <bpmn2:target>_V9PqoQBqED6yauvTguNpzQ</bpmn2:target>
       </bpmn2:linkEventDefinition>
     </bpmn2:intermediateThrowEvent>
     <bpmn2:scriptTask id="_C5F41FFE-6D5F-47D9-8BF6-A933CE1C30A7" name="Calcular Fecha Vencimiento" scriptFormat="http://www.java.com/java">
@@ -2336,7 +2348,7 @@ System.out.printf("[%s] Se actualizo el estado a: %s%n", idInstanciaProceso, var
         </drools:metaData>
       </bpmn2:extensionElements>
       <bpmn2:outgoing>_B67B162E-7E40-4CA0-9428-A66B50101E6B</bpmn2:outgoing>
-      <bpmn2:linkEventDefinition id="_k4pIYABpED6yauvTguNpzQ" name="tipificar"/>
+      <bpmn2:linkEventDefinition id="_V9Q4wgBqED6yauvTguNpzQ" name="tipificar"/>
     </bpmn2:intermediateCatchEvent>
     <bpmn2:exclusiveGateway id="_96A6BE11-6683-4144-AD30-0161315F08E6" drools:dg="_E1368A54-3EC2-479C-BBE1-B19682822E96" name="Rechaza Asignación?" gatewayDirection="Diverging" default="_E1368A54-3EC2-479C-BBE1-B19682822E96">
       <bpmn2:extensionElements>
@@ -2692,15 +2704,15 @@ kcontext.setVariable("estado", "EST-017");
 String varestado = (String) kcontext.getVariable("estado");
 System.out.printf("[%s] Se actualizo el estado a: %s%n", idInstanciaProceso, varestado);</bpmn2:script>
     </bpmn2:scriptTask>
-    <bpmn2:intermediateThrowEvent id="_E6A07759-320E-46D1-AEFA-DF12E2F62409" name="reasginar proyector">
+    <bpmn2:intermediateThrowEvent id="_E6A07759-320E-46D1-AEFA-DF12E2F62409" name="reasignar proyectar">
       <bpmn2:extensionElements>
         <drools:metaData name="elementname">
-          <drools:metaValue><![CDATA[reasginar proyector]]></drools:metaValue>
+          <drools:metaValue><![CDATA[reasignar proyectar]]></drools:metaValue>
         </drools:metaData>
       </bpmn2:extensionElements>
       <bpmn2:incoming>_3BAE2EAD-1F5F-435E-99BE-B78B1C32F252</bpmn2:incoming>
-      <bpmn2:linkEventDefinition id="_k4pvcABpED6yauvTguNpzQ" name="reasignar proyector">
-        <bpmn2:target>_k4leAABpED6yauvTguNpzQ</bpmn2:target>
+      <bpmn2:linkEventDefinition id="_V9Rf0ABqED6yauvTguNpzQ" name="reasignar proyectar">
+        <bpmn2:target>_V9OcgABqED6yauvTguNpzQ</bpmn2:target>
       </bpmn2:linkEventDefinition>
     </bpmn2:intermediateThrowEvent>
     <bpmn2:userTask id="_2D84603E-281A-415D-8AE1-E6F1B9A443EF" name="Autorizar Rechazo Extemporáneo Tipificador  [Radicado: #{numRadEntrada}]">
@@ -2774,8 +2786,8 @@ if (!autRechExtempTipFlag && (autRechExtempTipObs == null || autRechExtempTipObs
         <bpmn2:sourceRef>_2D84603E-281A-415D-8AE1-E6F1B9A443EF_autRechExtempTipObsOutputX</bpmn2:sourceRef>
         <bpmn2:targetRef>autRechExtempTipObs</bpmn2:targetRef>
       </bpmn2:dataOutputAssociation>
-      <bpmn2:potentialOwner id="_k4pvcQBpED6yauvTguNpzQ">
-        <bpmn2:resourceAssignmentExpression id="_k4pvcgBpED6yauvTguNpzQ">
+      <bpmn2:potentialOwner id="_V9Rf0QBqED6yauvTguNpzQ">
+        <bpmn2:resourceAssignmentExpression id="_V9Rf0gBqED6yauvTguNpzQ">
           <bpmn2:formalExpression>#{tipificarAutUsuario}</bpmn2:formalExpression>
         </bpmn2:resourceAssignmentExpression>
       </bpmn2:potentialOwner>
@@ -2832,8 +2844,8 @@ System.out.printf("[%s] Se actualizo la  alerta a: %s%n", idInstanciaProceso, va
         </drools:metaData>
       </bpmn2:extensionElements>
       <bpmn2:incoming>_127C00F5-2F28-43CC-9E83-767C9B5194CB</bpmn2:incoming>
-      <bpmn2:linkEventDefinition id="_k4qWgABpED6yauvTguNpzQ" name="tipificar">
-        <bpmn2:target>_k4pIYABpED6yauvTguNpzQ</bpmn2:target>
+      <bpmn2:linkEventDefinition id="_V9Rf0wBqED6yauvTguNpzQ" name="tipificar">
+        <bpmn2:target>_V9Q4wgBqED6yauvTguNpzQ</bpmn2:target>
       </bpmn2:linkEventDefinition>
     </bpmn2:intermediateThrowEvent>
     <bpmn2:scriptTask id="_3E040F4A-D37E-41CB-9353-D0CDB9664E32" name="Actualizar estado EST-010: Rechazo Extemporáneo No Aprobado" scriptFormat="http://www.java.com/java">
@@ -2895,8 +2907,8 @@ System.out.printf("[%s] Se actualizo la  alerta a: %s%n", idInstanciaProceso, va
         </drools:metaData>
       </bpmn2:extensionElements>
       <bpmn2:incoming>_413EB415-CC24-434D-B6AB-14DDD0BC68EB</bpmn2:incoming>
-      <bpmn2:linkEventDefinition id="_k4qWgQBpED6yauvTguNpzQ" name="rechazo">
-        <bpmn2:target>_k4nTMwBpED6yauvTguNpzQ</bpmn2:target>
+      <bpmn2:linkEventDefinition id="_V9SG4ABqED6yauvTguNpzQ" name="rechazo">
+        <bpmn2:target>_V9PqowBqED6yauvTguNpzQ</bpmn2:target>
       </bpmn2:linkEventDefinition>
     </bpmn2:intermediateThrowEvent>
     <bpmn2:scriptTask id="_87E452EB-B269-4404-B31B-573B04434E15" name="Validar Resultado Firmas" scriptFormat="http://www.java.com/java">
@@ -2954,8 +2966,8 @@ System.out.printf("[%s] Se actualizo el estado a: %s%n", idInstanciaProceso, var
         </drools:metaData>
       </bpmn2:extensionElements>
       <bpmn2:incoming>_3513ECD1-3299-4A5C-9E6F-6AC77279849F</bpmn2:incoming>
-      <bpmn2:linkEventDefinition id="_k4qWggBpED6yauvTguNpzQ" name="generar">
-        <bpmn2:target>_k4n6QgBpED6yauvTguNpzQ</bpmn2:target>
+      <bpmn2:linkEventDefinition id="_V9SG4QBqED6yauvTguNpzQ" name="generar">
+        <bpmn2:target>_V9QRsgBqED6yauvTguNpzQ</bpmn2:target>
       </bpmn2:linkEventDefinition>
     </bpmn2:intermediateThrowEvent>
     <bpmn2:scriptTask id="_A585103A-1686-49B3-82A4-5FCACE393FF2" name="Actualizar estado EST-013: Rechazado para VoBo y/o Firma" scriptFormat="http://www.java.com/java">
@@ -2978,7 +2990,7 @@ System.out.printf("[%s] Se actualizo el estado a: %s%n", idInstanciaProceso, var
         </drools:metaData>
       </bpmn2:extensionElements>
       <bpmn2:outgoing>_121C92AD-8225-4474-B439-C82568F9C620</bpmn2:outgoing>
-      <bpmn2:linkEventDefinition id="_k4qWgwBpED6yauvTguNpzQ" name="firmar"/>
+      <bpmn2:linkEventDefinition id="_V9SG4gBqED6yauvTguNpzQ" name="firmar"/>
     </bpmn2:intermediateCatchEvent>
     <bpmn2:intermediateCatchEvent id="_BCBC947C-EE0B-458C-8131-760A95D3D71A" name="Aprobar">
       <bpmn2:extensionElements>
@@ -2987,7 +2999,7 @@ System.out.printf("[%s] Se actualizo el estado a: %s%n", idInstanciaProceso, var
         </drools:metaData>
       </bpmn2:extensionElements>
       <bpmn2:outgoing>_CEA99EDD-B96B-4A14-B7B1-0D1BEC4FEAFD</bpmn2:outgoing>
-      <bpmn2:linkEventDefinition id="_k4q9kABpED6yauvTguNpzQ" name="aprobar"/>
+      <bpmn2:linkEventDefinition id="_V9SG4wBqED6yauvTguNpzQ" name="aprobar"/>
     </bpmn2:intermediateCatchEvent>
     <bpmn2:intermediateThrowEvent id="_EAC5054C-B8C7-4BB6-B9EB-5907E12A5DAF" name="Gestionar Rechazo">
       <bpmn2:extensionElements>
@@ -2996,8 +3008,8 @@ System.out.printf("[%s] Se actualizo el estado a: %s%n", idInstanciaProceso, var
         </drools:metaData>
       </bpmn2:extensionElements>
       <bpmn2:incoming>_5FDFBAC8-763D-427A-B855-33F559EE0EDC</bpmn2:incoming>
-      <bpmn2:linkEventDefinition id="_k4q9kQBpED6yauvTguNpzQ" name="rechazo">
-        <bpmn2:target>_k4nTMwBpED6yauvTguNpzQ</bpmn2:target>
+      <bpmn2:linkEventDefinition id="_V9SG5ABqED6yauvTguNpzQ" name="rechazo">
+        <bpmn2:target>_V9PqowBqED6yauvTguNpzQ</bpmn2:target>
       </bpmn2:linkEventDefinition>
     </bpmn2:intermediateThrowEvent>
     <bpmn2:scriptTask id="_74794AE3-D10F-4494-8982-2A548A10F619" name="Actualizar estado EST-013: Rechazado para VoBo y/o Firma" scriptFormat="http://www.java.com/java">
@@ -3021,8 +3033,8 @@ System.out.printf("[%s] Se actualizo el estado a: %s%n", idInstanciaProceso, var
         </drools:metaData>
       </bpmn2:extensionElements>
       <bpmn2:incoming>_170AC18B-76EC-455D-A25D-C0716C5EC4B2</bpmn2:incoming>
-      <bpmn2:linkEventDefinition id="_k4q9kgBpED6yauvTguNpzQ" name="firmar">
-        <bpmn2:target>_k4qWgwBpED6yauvTguNpzQ</bpmn2:target>
+      <bpmn2:linkEventDefinition id="_V9SG5QBqED6yauvTguNpzQ" name="firmar">
+        <bpmn2:target>_V9SG4gBqED6yauvTguNpzQ</bpmn2:target>
       </bpmn2:linkEventDefinition>
     </bpmn2:intermediateThrowEvent>
     <bpmn2:exclusiveGateway id="_98CD7A67-744D-422B-8BC3-F523BB39F198" drools:dg="_170AC18B-76EC-455D-A25D-C0716C5EC4B2" name="Se asignaron usuarios aprobadores?" gatewayDirection="Diverging" default="_170AC18B-76EC-455D-A25D-C0716C5EC4B2">
@@ -3089,8 +3101,8 @@ kcontext.setVariable("aprobacionApruebaFlag", apruebanTodos);</bpmn2:script>
         </drools:metaData>
       </bpmn2:extensionElements>
       <bpmn2:incoming>_55DF687A-75BC-4634-8C47-4C098855C51D</bpmn2:incoming>
-      <bpmn2:linkEventDefinition id="_k4q9kwBpED6yauvTguNpzQ" name="firmar">
-        <bpmn2:target>_k4qWgwBpED6yauvTguNpzQ</bpmn2:target>
+      <bpmn2:linkEventDefinition id="_V9St8ABqED6yauvTguNpzQ" name="firmar">
+        <bpmn2:target>_V9SG4gBqED6yauvTguNpzQ</bpmn2:target>
       </bpmn2:linkEventDefinition>
     </bpmn2:intermediateThrowEvent>
     <bpmn2:intermediateThrowEvent id="_EAD94E4E-51EE-4C6E-A87B-D1C3A0B6DB13" name="Aprobar">
@@ -3100,8 +3112,8 @@ kcontext.setVariable("aprobacionApruebaFlag", apruebanTodos);</bpmn2:script>
         </drools:metaData>
       </bpmn2:extensionElements>
       <bpmn2:incoming>_04104445-31D9-4BC8-8010-88920465EE83</bpmn2:incoming>
-      <bpmn2:linkEventDefinition id="_k4q9lABpED6yauvTguNpzQ" name="aprobar">
-        <bpmn2:target>_k4q9kABpED6yauvTguNpzQ</bpmn2:target>
+      <bpmn2:linkEventDefinition id="_V9St8QBqED6yauvTguNpzQ" name="aprobar">
+        <bpmn2:target>_V9SG4wBqED6yauvTguNpzQ</bpmn2:target>
       </bpmn2:linkEventDefinition>
     </bpmn2:intermediateThrowEvent>
     <bpmn2:scriptTask id="_51FFF808-803A-4476-9FBA-35281E5637F2" name="Validar Resultado Revisión" scriptFormat="http://www.java.com/java">
@@ -3148,8 +3160,8 @@ System.out.printf("[%s] Se actualizo el estado a: %s%n", idInstanciaProceso, var
         </drools:metaData>
       </bpmn2:extensionElements>
       <bpmn2:incoming>_2EE6F9C7-6B1E-4824-A12A-F194C812A847</bpmn2:incoming>
-      <bpmn2:linkEventDefinition id="_k4q9lQBpED6yauvTguNpzQ" name="aprobar">
-        <bpmn2:target>_k4q9kABpED6yauvTguNpzQ</bpmn2:target>
+      <bpmn2:linkEventDefinition id="_V9St8gBqED6yauvTguNpzQ" name="aprobar">
+        <bpmn2:target>_V9SG4wBqED6yauvTguNpzQ</bpmn2:target>
       </bpmn2:linkEventDefinition>
     </bpmn2:intermediateThrowEvent>
     <bpmn2:exclusiveGateway id="_E330E127-E265-43C8-BE17-C93E2BAE5197" name="Revisión Aprobada?" gatewayDirection="Diverging">
@@ -3169,8 +3181,8 @@ System.out.printf("[%s] Se actualizo el estado a: %s%n", idInstanciaProceso, var
         </drools:metaData>
       </bpmn2:extensionElements>
       <bpmn2:incoming>_0199EFD1-F10E-47B3-B473-E58295047EB8</bpmn2:incoming>
-      <bpmn2:linkEventDefinition id="_k4rkoABpED6yauvTguNpzQ" name="rechazo">
-        <bpmn2:target>_k4nTMwBpED6yauvTguNpzQ</bpmn2:target>
+      <bpmn2:linkEventDefinition id="_V9St8wBqED6yauvTguNpzQ" name="rechazo">
+        <bpmn2:target>_V9PqowBqED6yauvTguNpzQ</bpmn2:target>
       </bpmn2:linkEventDefinition>
     </bpmn2:intermediateThrowEvent>
     <bpmn2:scriptTask id="_81E27B0E-D263-4ECC-B09E-85AEF16FBF6A" name="Enviar Notificación ALT-008: Correcciones Pendientes de Gestión" scriptFormat="http://www.java.com/java">
@@ -3415,8 +3427,8 @@ System.out.printf("[%s] apruebaRechazoOtro: %s%n", idInstanciaProceso, apruebaRe
           <bpmn2:sourceRef>_2A7B94DF-AFB7-4BE2-951D-7BBC9459CCBA_apruebaRechazoOtroOutputX</bpmn2:sourceRef>
           <bpmn2:targetRef>apruebaRechazoOtro</bpmn2:targetRef>
         </bpmn2:dataOutputAssociation>
-        <bpmn2:potentialOwner id="_k4sLsABpED6yauvTguNpzQ">
-          <bpmn2:resourceAssignmentExpression id="_k4sLsQBpED6yauvTguNpzQ">
+        <bpmn2:potentialOwner id="_V9TVAABqED6yauvTguNpzQ">
+          <bpmn2:resourceAssignmentExpression id="_V9TVAQBqED6yauvTguNpzQ">
             <bpmn2:formalExpression>#{usuarioAprobador}</bpmn2:formalExpression>
           </bpmn2:resourceAssignmentExpression>
         </bpmn2:potentialOwner>
@@ -3660,8 +3672,8 @@ System.out.printf("[%s] apruebaRechazoOtro: %s%n", idInstanciaProceso, apruebaRe
           <bpmn2:sourceRef>_00B3927F-49DD-46FE-B38F-4AB51D2B954D_apruebaRechazoOtroOutputX</bpmn2:sourceRef>
           <bpmn2:targetRef>apruebaRechazoOtro</bpmn2:targetRef>
         </bpmn2:dataOutputAssociation>
-        <bpmn2:potentialOwner id="_k4sywABpED6yauvTguNpzQ">
-          <bpmn2:resourceAssignmentExpression id="_k4sywQBpED6yauvTguNpzQ">
+        <bpmn2:potentialOwner id="_V9T8EABqED6yauvTguNpzQ">
+          <bpmn2:resourceAssignmentExpression id="_V9T8EQBqED6yauvTguNpzQ">
             <bpmn2:formalExpression>#{usuarioAprobador}</bpmn2:formalExpression>
           </bpmn2:resourceAssignmentExpression>
         </bpmn2:potentialOwner>
@@ -3972,8 +3984,8 @@ System.out.printf("[%s] apruebaRechazoOtro: %s%n", idInstanciaProceso, apruebaRe
           <bpmn2:sourceRef>_831C4EE7-7533-42BF-9818-A3D53DF789BA_apruebaRechazoOtroOutputX</bpmn2:sourceRef>
           <bpmn2:targetRef>apruebaRechazoOtro</bpmn2:targetRef>
         </bpmn2:dataOutputAssociation>
-        <bpmn2:potentialOwner id="_k4tZ0ABpED6yauvTguNpzQ">
-          <bpmn2:resourceAssignmentExpression id="_k4tZ0QBpED6yauvTguNpzQ">
+        <bpmn2:potentialOwner id="_V9UjIABqED6yauvTguNpzQ">
+          <bpmn2:resourceAssignmentExpression id="_V9UjIQBqED6yauvTguNpzQ">
             <bpmn2:formalExpression>#{usuarioAprobador}</bpmn2:formalExpression>
           </bpmn2:resourceAssignmentExpression>
         </bpmn2:potentialOwner>
@@ -4187,7 +4199,7 @@ System.out.printf("[%s] apruebaRechazoOtro: %s%n", idInstanciaProceso, apruebaRe
         <dc:Bounds height="102" width="154" x="1648" y="762.2282"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="shape__E6A07759-320E-46D1-AEFA-DF12E2F62409" bpmnElement="_E6A07759-320E-46D1-AEFA-DF12E2F62409">
-        <dc:Bounds height="56" width="56" x="2800" y="328.66673299999997"/>
+        <dc:Bounds height="56" width="56" x="2802" y="328.66673299999997"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="shape__7FEC1C00-4588-4853-92DF-9EBB5ADB98CC" bpmnElement="_7FEC1C00-4588-4853-92DF-9EBB5ADB98CC">
         <dc:Bounds height="102.00001000000003" width="168" x="1705.3336299999999" y="102.66671299999996"/>
@@ -4244,13 +4256,13 @@ System.out.printf("[%s] apruebaRechazoOtro: %s%n", idInstanciaProceso, apruebaRe
         <dc:Bounds height="102" width="154" x="2497" y="305.66673299999997"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="shape__AA8697DD-5A05-4B8C-B6FA-6BF5555DA3B6" bpmnElement="_AA8697DD-5A05-4B8C-B6FA-6BF5555DA3B6">
-        <dc:Bounds height="56" width="56" x="3485.7222000000006" y="1166"/>
+        <dc:Bounds height="56" width="56" x="3485.7222" y="1166"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="shape__7F6AB922-A394-488B-A65A-A610030C3DBC" bpmnElement="_7F6AB922-A394-488B-A65A-A610030C3DBC">
-        <dc:Bounds height="102" width="180.1538099999998" x="2641.9230950000006" y="1344"/>
+        <dc:Bounds height="102" width="180.1538099999998" x="2641.923095" y="1344"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="shape__F826D683-1985-4490-8B13-A604BFB245D8" bpmnElement="_F826D683-1985-4490-8B13-A604BFB245D8">
-        <dc:Bounds height="107" width="204" x="2115.0972000000006" y="1341.8335"/>
+        <dc:Bounds height="107" width="204" x="2115.0972" y="1341.8335"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="shape__2A997941-4D1E-400D-8D68-13511EB57EF1" bpmnElement="_2A997941-4D1E-400D-8D68-13511EB57EF1">
         <dc:Bounds height="102" width="168" x="7597.222" y="1942"/>
@@ -4262,31 +4274,31 @@ System.out.printf("[%s] apruebaRechazoOtro: %s%n", idInstanciaProceso, apruebaRe
         <dc:Bounds height="56" width="56" x="6196.347" y="1747.3335"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="shape__317FCDD0-CA3C-40AB-A699-B37178DFA6CD" bpmnElement="_317FCDD0-CA3C-40AB-A699-B37178DFA6CD">
-        <dc:Bounds height="56" width="56" x="2997.5972000000006" y="1367.3335"/>
+        <dc:Bounds height="56" width="56" x="2997.5972" y="1367.3335"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="shape__1257AD3A-60C6-4BE1-B021-0492BF655D80" bpmnElement="_1257AD3A-60C6-4BE1-B021-0492BF655D80">
         <dc:Bounds height="103.25" width="206.5" x="6832.722" y="1726.75"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="shape__5F305FDE-8BB0-4818-B277-08D34707478D" bpmnElement="_5F305FDE-8BB0-4818-B277-08D34707478D">
-        <dc:Bounds height="56" width="56" x="2866.3472000000006" y="2069.4167"/>
+        <dc:Bounds height="56" width="56" x="2866.3472" y="2069.4167"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="shape__1A8B791B-5C8E-471C-AD33-2046E84B0F97" bpmnElement="_1A8B791B-5C8E-471C-AD33-2046E84B0F97">
-        <dc:Bounds height="102" width="168" x="3650.7222000000006" y="1145"/>
+        <dc:Bounds height="102" width="168" x="3650.7222" y="1145"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="shape__5F7EC587-56F5-49D7-A321-9CCC7CB11A20" bpmnElement="_5F7EC587-56F5-49D7-A321-9CCC7CB11A20">
-        <dc:Bounds height="56" width="56" x="3631.2222000000006" y="1749"/>
+        <dc:Bounds height="56" width="56" x="3631.2222" y="1749"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="shape__64473346-9F72-4DE5-85CE-2A749F3BCF96" bpmnElement="_64473346-9F72-4DE5-85CE-2A749F3BCF96">
-        <dc:Bounds height="102" width="168" x="3498.2222000000006" y="1885"/>
+        <dc:Bounds height="102" width="168" x="3498.2222" y="1885"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="shape__F7CC40EA-F7AA-4DBB-9BF2-8011D79C93A8" bpmnElement="_F7CC40EA-F7AA-4DBB-9BF2-8011D79C93A8">
-        <dc:Bounds height="107" width="203.99999999999955" x="3948.7222000000006" y="1142"/>
+        <dc:Bounds height="107" width="204" x="3948.7222" y="1142"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="shape__0897BE60-1135-4310-A693-E63348769D9B" bpmnElement="_0897BE60-1135-4310-A693-E63348769D9B">
-        <dc:Bounds height="56" width="56" x="1502" y="1369"/>
+        <dc:Bounds height="56" width="56" x="1337" y="1371"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="shape__DC63D549-FC3B-4B0B-BA5B-B19362A8277D" bpmnElement="_DC63D549-FC3B-4B0B-BA5B-B19362A8277D">
-        <dc:Bounds height="56" width="56" x="2453.7222000000006" y="1366"/>
+        <dc:Bounds height="56" width="56" x="2453.7222" y="1366"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="shape__A30C9060-CE08-45CE-815C-1C3D74A902C9" bpmnElement="_A30C9060-CE08-45CE-815C-1C3D74A902C9">
         <dc:Bounds height="56" width="56" x="4282.722" y="1167"/>
@@ -4298,13 +4310,13 @@ System.out.printf("[%s] apruebaRechazoOtro: %s%n", idInstanciaProceso, apruebaRe
         <dc:Bounds height="56" width="56" x="8007.722" y="1742"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="shape__14A00A90-17F7-4A91-8E6F-331ECF810450" bpmnElement="_14A00A90-17F7-4A91-8E6F-331ECF810450">
-        <dc:Bounds height="56" width="56" x="3111.3472000000006" y="1908.4167"/>
+        <dc:Bounds height="56" width="56" x="3111.3472" y="1908.4167"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="shape__0E123392-BE6B-4FD0-9F44-283398548C89" bpmnElement="_0E123392-BE6B-4FD0-9F44-283398548C89">
-        <dc:Bounds height="102" width="168" x="3231.2222000000006" y="1729"/>
+        <dc:Bounds height="102" width="168" x="3231.2222" y="1729"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="shape__2FF4A477-A411-466B-B17C-1B32DB70064D" bpmnElement="_2FF4A477-A411-466B-B17C-1B32DB70064D">
-        <dc:Bounds height="102" width="154" x="3271.3472000000006" y="1887.4167"/>
+        <dc:Bounds height="102" width="154" x="3271.3472" y="1887.4167"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="shape__7EFEBC00-782B-4F6F-AA01-EB356F8ED782" bpmnElement="_7EFEBC00-782B-4F6F-AA01-EB356F8ED782">
         <dc:Bounds height="56" width="56" x="7453.722" y="1756"/>
@@ -4313,22 +4325,25 @@ System.out.printf("[%s] apruebaRechazoOtro: %s%n", idInstanciaProceso, apruebaRe
         <dc:Bounds height="102" width="168" x="7602.222" y="1486"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="shape__825AACE9-437F-4DA3-805D-8297F6710A57" bpmnElement="_825AACE9-437F-4DA3-805D-8297F6710A57">
-        <dc:Bounds height="102" width="154" x="3258.0000000000005" y="1145"/>
+        <dc:Bounds height="102" width="154" x="3258" y="1145"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="shape__C51EF369-8AD6-472D-8BE3-2280A81DA9E0" bpmnElement="_C51EF369-8AD6-472D-8BE3-2280A81DA9E0">
-        <dc:Bounds height="102" width="168" x="1840.0000000000005" y="1344"/>
+        <dc:Bounds height="102" width="168" x="1840" y="1344"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="shape__BD7D564D-FE4A-4F98-9DBF-CACD43312A6E" bpmnElement="_BD7D564D-FE4A-4F98-9DBF-CACD43312A6E">
-        <dc:Bounds height="101.99999999999977" width="154" x="3061.3472000000006" y="2044.3335"/>
+        <dc:Bounds height="101.99999999999977" width="154" x="3061.3472" y="2044.3335"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="shape__976D5E25-1BD8-49E2-AE7E-B47B1D8E800A" bpmnElement="_976D5E25-1BD8-49E2-AE7E-B47B1D8E800A">
         <dc:Bounds height="56" width="56" x="7865.222" y="1742"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="shape__651A4F02-4ABE-44FD-A1F8-6FFCB9A2F762" bpmnElement="_651A4F02-4ABE-44FD-A1F8-6FFCB9A2F762">
-        <dc:Bounds height="102" width="154" x="1603" y="1568"/>
+        <dc:Bounds height="102" width="154" x="1410" y="1592"/>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="shape__BC3EF5A6-483F-406E-8DB8-374EA35A9B1A" bpmnElement="_BC3EF5A6-483F-406E-8DB8-374EA35A9B1A">
-        <dc:Bounds height="56" width="56" x="1456" y="1591"/>
+      <bpmndi:BPMNShape id="shape__C3B2636E-A03F-42F2-BE44-32B190E772C4" bpmnElement="_C3B2636E-A03F-42F2-BE44-32B190E772C4">
+        <dc:Bounds height="56" width="56" x="1631" y="1371"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape__E1AF4E02-6CDA-49CE-A146-9C917BE8FF95" bpmnElement="_E1AF4E02-6CDA-49CE-A146-9C917BE8FF95">
+        <dc:Bounds height="56" width="56" x="1270" y="1617"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="shape__AB6D8E2C-9CD4-4E9D-ACCB-DFC2267A2A37" bpmnElement="_AB6D8E2C-9CD4-4E9D-ACCB-DFC2267A2A37">
         <dc:Bounds height="569.1667499999999" width="2850" x="3371" y="2201.8333"/>
@@ -4346,10 +4361,10 @@ System.out.printf("[%s] apruebaRechazoOtro: %s%n", idInstanciaProceso, apruebaRe
         <dc:Bounds height="598.2222" width="3107.833" x="178.16699999999992" y="43.77779999999996"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="shape__5149621A-B2E3-4EC9-B50C-620D85948FFC" bpmnElement="_5149621A-B2E3-4EC9-B50C-620D85948FFC">
-        <dc:Bounds height="1103.6665" width="8009.1943" x="175.4028500000004" y="1089.3335"/>
+        <dc:Bounds height="1103.6665" width="8009.194299999999" x="175.40285" y="1089.3335"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="edge_shape__64473346-9F72-4DE5-85CE-2A749F3BCF96_to_shape__85AA06B4-B224-4281-9C06-09706908D22E" bpmnElement="_CCBAF7D5-97B1-4EA3-8D66-01D5173CCD6D">
-        <di:waypoint x="3582.2222000000006" y="1936"/>
+        <di:waypoint x="3582.2222" y="1936"/>
         <di:waypoint x="3588" y="2377.8333"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="edge_shape__85AA06B4-B224-4281-9C06-09706908D22E_to_shape__23308F4C-57F4-4360-9626-995C1CB51927" bpmnElement="_2485E2B7-E3CC-4ADE-8441-FE34AC9627C3">
@@ -4497,7 +4512,7 @@ System.out.printf("[%s] apruebaRechazoOtro: %s%n", idInstanciaProceso, apruebaRe
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="edge_shape__8D8DEE5B-FA5C-49E0-8FE8-EDB85D66F215_to_shape__E6A07759-320E-46D1-AEFA-DF12E2F62409" bpmnElement="_3BAE2EAD-1F5F-435E-99BE-B78B1C32F252">
         <di:waypoint x="2574" y="356.66673299999997"/>
-        <di:waypoint x="2800" y="356.66673299999997"/>
+        <di:waypoint x="2802" y="356.66673299999997"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="edge_shape__C7FE95FA-759D-43DD-BDCA-F044C86444A5_to_shape__7FEC1C00-4588-4853-92DF-9EBB5ADB98CC" bpmnElement="_249ABDA5-DD42-44F7-9E23-282859440AB4">
         <di:waypoint x="1559.1670299999998" y="153.77779299999997"/>
@@ -4577,35 +4592,35 @@ System.out.printf("[%s] apruebaRechazoOtro: %s%n", idInstanciaProceso, apruebaRe
         <di:waypoint x="1345.3336299999999" y="473.66673299999997"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="edge_shape__825AACE9-437F-4DA3-805D-8297F6710A57_to_shape__AA8697DD-5A05-4B8C-B6FA-6BF5555DA3B6" bpmnElement="_24EBA064-BFF5-4B93-B0B6-7BEA2B33271B">
-        <di:waypoint x="3335.0000000000005" y="1196"/>
-        <di:waypoint x="3485.7222000000006" y="1194"/>
+        <di:waypoint x="3335" y="1196"/>
+        <di:waypoint x="3485.7222" y="1194"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="edge_shape__AA8697DD-5A05-4B8C-B6FA-6BF5555DA3B6_to_shape__DC63D549-FC3B-4B0B-BA5B-B19362A8277D" bpmnElement="_454DE7E7-7C3D-4C2C-9938-DBBA041B2369">
-        <di:waypoint x="3513.7222000000006" y="1194"/>
+        <di:waypoint x="3513.7222" y="1194"/>
         <di:waypoint x="3513.9995" y="1101.8745"/>
         <di:waypoint x="2482" y="1101.8745"/>
-        <di:waypoint x="2481.7222000000006" y="1366"/>
+        <di:waypoint x="2481.7222" y="1366"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="edge_shape__AA8697DD-5A05-4B8C-B6FA-6BF5555DA3B6_to_shape__1A8B791B-5C8E-471C-AD33-2046E84B0F97" bpmnElement="_1FC557D8-802D-4835-9B23-3C96ED2E2FE8">
-        <di:waypoint x="3513.7222000000006" y="1194"/>
+        <di:waypoint x="3513.7222" y="1194"/>
         <di:waypoint x="3556.734" y="1194.0819"/>
-        <di:waypoint x="3650.7222000000006" y="1196"/>
+        <di:waypoint x="3650.7222" y="1196"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="edge_shape__DC63D549-FC3B-4B0B-BA5B-B19362A8277D_to_shape__7F6AB922-A394-488B-A65A-A610030C3DBC" bpmnElement="_AAEFDFAE-AA6E-4760-B059-FB13B8AE62D8">
-        <di:waypoint x="2481.7222000000006" y="1394"/>
-        <di:waypoint x="2641.9230950000006" y="1395"/>
+        <di:waypoint x="2481.7222" y="1394"/>
+        <di:waypoint x="2641.923095" y="1395"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="edge_shape__7F6AB922-A394-488B-A65A-A610030C3DBC_to_shape__317FCDD0-CA3C-40AB-A699-B37178DFA6CD" bpmnElement="_215ED6EC-0B3B-4E93-9BBD-4F4EDC8F84D8">
-        <di:waypoint x="2732.000095000001" y="1395"/>
-        <di:waypoint x="3025.5972000000006" y="1395.3335"/>
+        <di:waypoint x="2732.0000950000003" y="1395"/>
+        <di:waypoint x="3025.5972" y="1395.3335"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="edge_shape__C51EF369-8AD6-472D-8BE3-2280A81DA9E0_to_shape__F826D683-1985-4490-8B13-A604BFB245D8" bpmnElement="_35157CE1-B63A-4296-9B0D-0F884C59B5C2">
-        <di:waypoint x="1924.0000000000005" y="1395"/>
-        <di:waypoint x="2217.0972000000006" y="1395.3335"/>
+        <di:waypoint x="1924" y="1395"/>
+        <di:waypoint x="2217.0972" y="1395.3335"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="edge_shape__F826D683-1985-4490-8B13-A604BFB245D8_to_shape__DC63D549-FC3B-4B0B-BA5B-B19362A8277D" bpmnElement="_8C11A781-A63B-4822-B73C-DBD245C77323">
-        <di:waypoint x="2217.0972000000006" y="1395.3335"/>
-        <di:waypoint x="2453.7222000000006" y="1394"/>
+        <di:waypoint x="2217.0972" y="1395.3335"/>
+        <di:waypoint x="2453.7222" y="1394"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="edge_shape__7EFEBC00-782B-4F6F-AA01-EB356F8ED782_to_shape__2A997941-4D1E-400D-8D68-13511EB57EF1" bpmnElement="_8F40F7DA-35AE-494C-BF3E-7C6DBD7B508E">
         <di:waypoint x="7481.722" y="1784"/>
@@ -4627,53 +4642,53 @@ System.out.printf("[%s] apruebaRechazoOtro: %s%n", idInstanciaProceso, apruebaRe
         <di:waypoint x="6832.722" y="1778.375"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="edge_shape__317FCDD0-CA3C-40AB-A699-B37178DFA6CD_to_shape__14A00A90-17F7-4A91-8E6F-331ECF810450" bpmnElement="_EBD47E81-3715-4B3B-B107-BB9F52891CA9">
-        <di:waypoint x="3025.5972000000006" y="1395.3335"/>
+        <di:waypoint x="3025.5972" y="1395.3335"/>
         <di:waypoint x="2813.7495" y="1639.5421"/>
         <di:waypoint x="2813.7495" y="1936"/>
-        <di:waypoint x="3139.3472000000006" y="1936.4167"/>
+        <di:waypoint x="3139.3472" y="1936.4167"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="edge_shape__317FCDD0-CA3C-40AB-A699-B37178DFA6CD_to_shape__0E123392-BE6B-4FD0-9F44-283398548C89" bpmnElement="_DC9F588D-3FD8-4540-AB16-BF8C18C22B83">
-        <di:waypoint x="3025.5972000000006" y="1395.3335"/>
+        <di:waypoint x="3025.5972" y="1395.3335"/>
         <di:waypoint x="3027.5" y="1782"/>
         <di:waypoint x="3085.1392" y="1782"/>
         <di:waypoint x="3085.1392" y="1782"/>
         <di:waypoint x="3085.1392" y="1782"/>
         <di:waypoint x="3085.1392" y="1782"/>
-        <di:waypoint x="3315.2222000000006" y="1729"/>
+        <di:waypoint x="3315.2222" y="1729"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="edge_shape__317FCDD0-CA3C-40AB-A699-B37178DFA6CD_to_shape__825AACE9-437F-4DA3-805D-8297F6710A57" bpmnElement="_B78CDEDD-AB01-427A-A36F-22046592B584">
-        <di:waypoint x="3025.5972000000006" y="1395.3335"/>
+        <di:waypoint x="3025.5972" y="1395.3335"/>
         <di:waypoint x="3027.5" y="1198"/>
         <di:waypoint x="3136.1646" y="1198"/>
-        <di:waypoint x="3335.0000000000005" y="1247"/>
+        <di:waypoint x="3335" y="1247"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="edge_shape__1257AD3A-60C6-4BE1-B021-0492BF655D80_to_shape__9B7FD71B-BAD8-4B05-B199-716C7F1AA0E3" bpmnElement="_83BDCBB9-FF56-4C2C-9AB3-3373B0B2BCAF">
         <di:waypoint x="6935.972" y="1778.375"/>
         <di:waypoint x="7273.972" y="1732"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="edge_shape__5F305FDE-8BB0-4818-B277-08D34707478D_to_shape__BD7D564D-FE4A-4F98-9DBF-CACD43312A6E" bpmnElement="_D13B4255-CFDF-46BA-B42B-DEC27D56A20A">
-        <di:waypoint x="2894.3472000000006" y="2097.4167"/>
-        <di:waypoint x="3138.3472000000006" y="2095.3335"/>
+        <di:waypoint x="2894.3472" y="2097.4167"/>
+        <di:waypoint x="3138.3472" y="2095.3335"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="edge_shape__1A8B791B-5C8E-471C-AD33-2046E84B0F97_to_shape__F7CC40EA-F7AA-4DBB-9BF2-8011D79C93A8" bpmnElement="_8D79FD24-C555-4741-9B24-22ADA042456F">
-        <di:waypoint x="3734.7222000000006" y="1196"/>
-        <di:waypoint x="3948.7222000000006" y="1195.5"/>
+        <di:waypoint x="3734.7222" y="1196"/>
+        <di:waypoint x="3948.7222" y="1195.5"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="edge_shape__0E123392-BE6B-4FD0-9F44-283398548C89_to_shape__5F7EC587-56F5-49D7-A321-9CCC7CB11A20" bpmnElement="_FA3FE2F5-6F20-4BD8-A3C7-D0A23961FEF8">
-        <di:waypoint x="3315.2222000000006" y="1780"/>
-        <di:waypoint x="3659.2222000000006" y="1777"/>
+        <di:waypoint x="3315.2222" y="1780"/>
+        <di:waypoint x="3659.2222" y="1777"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="edge_shape__2FF4A477-A411-466B-B17C-1B32DB70064D_to_shape__64473346-9F72-4DE5-85CE-2A749F3BCF96" bpmnElement="_D598EA11-472E-4101-982E-255468A29A5D">
-        <di:waypoint x="3348.3472000000006" y="1938.4167"/>
-        <di:waypoint x="3498.2222000000006" y="1936"/>
+        <di:waypoint x="3348.3472" y="1938.4167"/>
+        <di:waypoint x="3498.2222" y="1936"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="edge_shape__F7CC40EA-F7AA-4DBB-9BF2-8011D79C93A8_to_shape__A30C9060-CE08-45CE-815C-1C3D74A902C9" bpmnElement="_FF4107B4-A133-4BD1-A22A-43772A22800C">
-        <di:waypoint x="4050.7222000000006" y="1195.5"/>
+        <di:waypoint x="4050.7222" y="1195.5"/>
         <di:waypoint x="4282.722" y="1195"/>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="edge_shape__0897BE60-1135-4310-A693-E63348769D9B_to_shape__C51EF369-8AD6-472D-8BE3-2280A81DA9E0" bpmnElement="_05B280EC-7EED-40FC-8065-D6A281226A5E">
-        <di:waypoint x="1530" y="1397"/>
-        <di:waypoint x="1840.0000000000005" y="1395"/>
+      <bpmndi:BPMNEdge id="edge_shape__0897BE60-1135-4310-A693-E63348769D9B_to_shape__C3B2636E-A03F-42F2-BE44-32B190E772C4" bpmnElement="_4D8DEA7C-4197-49F9-BEB6-4A2440316455">
+        <di:waypoint x="1365" y="1399"/>
+        <di:waypoint x="1631" y="1399"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="edge_shape__9B7FD71B-BAD8-4B05-B199-716C7F1AA0E3_to_shape__7EFEBC00-782B-4F6F-AA01-EB356F8ED782" bpmnElement="_6A1FCE69-EC0F-4FB2-A957-C79866040EF0">
         <di:waypoint x="7247.722" y="1783"/>
@@ -4684,12 +4699,12 @@ System.out.printf("[%s] apruebaRechazoOtro: %s%n", idInstanciaProceso, apruebaRe
         <di:waypoint x="8035.722" y="1742"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="edge_shape__BD7D564D-FE4A-4F98-9DBF-CACD43312A6E_to_shape__14A00A90-17F7-4A91-8E6F-331ECF810450" bpmnElement="_C72F8E70-2169-44C2-90C3-9E222EFAD934">
-        <di:waypoint x="3138.3472000000006" y="2095.3335"/>
-        <di:waypoint x="3111.3472000000006" y="1936.4167"/>
+        <di:waypoint x="3138.3472" y="2095.3335"/>
+        <di:waypoint x="3111.3472" y="1936.4167"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="edge_shape__14A00A90-17F7-4A91-8E6F-331ECF810450_to_shape__2FF4A477-A411-466B-B17C-1B32DB70064D" bpmnElement="_40E78606-8BE1-47FC-8202-AF7CF4C989A5">
-        <di:waypoint x="3139.3472000000006" y="1936.4167"/>
-        <di:waypoint x="3348.3472000000006" y="1938.4167"/>
+        <di:waypoint x="3139.3472" y="1936.4167"/>
+        <di:waypoint x="3348.3472" y="1938.4167"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="edge_shape__7EFEBC00-782B-4F6F-AA01-EB356F8ED782_to_shape__BC9D69D9-CD1F-4BD2-BCF8-FE10A29EC48E" bpmnElement="_FF0B9D54-F4FB-480B-9267-4AECBFDEE68D">
         <di:waypoint x="7481.722" y="1784"/>
@@ -4701,14 +4716,18 @@ System.out.printf("[%s] apruebaRechazoOtro: %s%n", idInstanciaProceso, apruebaRe
         <di:waypoint x="7893" y="1536"/>
         <di:waypoint x="7893.222" y="1770"/>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="edge_shape__651A4F02-4ABE-44FD-A1F8-6FFCB9A2F762_to_shape__C51EF369-8AD6-472D-8BE3-2280A81DA9E0" bpmnElement="_D8A49738-F7AC-4007-9BA1-D5BC7EE532B0">
-        <di:waypoint x="1680" y="1619"/>
-        <di:waypoint x="1924.0000000000005" y="1618.9999999999993"/>
-        <di:waypoint x="1924.0000000000005" y="1446"/>
+      <bpmndi:BPMNEdge id="edge_shape__C3B2636E-A03F-42F2-BE44-32B190E772C4_to_shape__C51EF369-8AD6-472D-8BE3-2280A81DA9E0" bpmnElement="_4FB79C9A-BEAB-4C15-88BA-D9046B70EEBA">
+        <di:waypoint x="1659" y="1399"/>
+        <di:waypoint x="1840" y="1395"/>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="edge_shape__BC3EF5A6-483F-406E-8DB8-374EA35A9B1A_to_shape__651A4F02-4ABE-44FD-A1F8-6FFCB9A2F762" bpmnElement="_4A5802D5-1BE9-4A5E-AB0E-BA6F587C604F">
-        <di:waypoint x="1484" y="1619"/>
-        <di:waypoint x="1603" y="1619"/>
+      <bpmndi:BPMNEdge id="edge_shape__E1AF4E02-6CDA-49CE-A146-9C917BE8FF95_to_shape__651A4F02-4ABE-44FD-A1F8-6FFCB9A2F762" bpmnElement="_7EF51FB5-4C7D-4671-89AC-52F33A975DCB">
+        <di:waypoint x="1298" y="1645"/>
+        <di:waypoint x="1410" y="1643"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape__651A4F02-4ABE-44FD-A1F8-6FFCB9A2F762_to_shape__C3B2636E-A03F-42F2-BE44-32B190E772C4" bpmnElement="_FA42CF34-8897-489D-9B3B-46206E816543">
+        <di:waypoint x="1487" y="1643"/>
+        <di:waypoint x="1659" y="1642.9997284915332"/>
+        <di:waypoint x="1659" y="1427"/>
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
@@ -5567,7 +5586,7 @@ System.out.printf("[%s] apruebaRechazoOtro: %s%n", idInstanciaProceso, apruebaRe
         </bpsim:Scenario>
       </bpsim:BPSimData>
     </bpmn2:extensionElements>
-    <bpmn2:source>_k4ewUABpED6yauvTguNpzQ</bpmn2:source>
-    <bpmn2:target>_k4ewUABpED6yauvTguNpzQ</bpmn2:target>
+    <bpmn2:source>_V9IV4ABqED6yauvTguNpzQ</bpmn2:source>
+    <bpmn2:target>_V9IV4ABqED6yauvTguNpzQ</bpmn2:target>
   </bpmn2:relationship>
 </bpmn2:definitions>
