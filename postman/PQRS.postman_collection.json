@@ -1,0 +1,1259 @@
+{
+	"info": {
+		"_postman_id": "fa44738d-c7b5-4063-bf86-5f16ad7fb427",
+		"name": "PQRS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15088016",
+		"_collection_link": "https://goallteam.postman.co/workspace/Goallteam~fff2a153-c21d-42c2-8eae-f2d9a54bf2a4/collection/15088016-fa44738d-c7b5-4063-bf86-5f16ad7fb427?action=share&source=collection_link&creator=15088016"
+	},
+	"item": [
+		{
+			"name": "Proceso",
+			"item": [
+				{
+					"name": "Crear Instancia PQRS con Correlation",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Check if response status is 200",
+									"if (pm.response.code === 201) {",
+									"    // Get the response body as a string",
+									"    var processInstanceId = pm.response.text().trim(); // Trim to remove any extra spaces or newlines",
+									"",
+									"    // Ensure the response is not empty and is a valid number",
+									"    if (processInstanceId && !isNaN(processInstanceId)) {",
+									"        pm.environment.set(\"processInstanceId\", processInstanceId);",
+									"        console.log(\"Process Instance ID saved: \" + processInstanceId);",
+									"    } else {",
+									"        console.log(\"Invalid processInstanceId received: \" + processInstanceId);",
+									"    }",
+									"} else {",
+									"    console.log(\"Request failed with status: \" + pm.response.code);",
+									"}"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{restPassword}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{restUser}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"numRadEntrada\": \"{{numRadEntrada}}\",\n    \"cuentaContrato\": \"{{cuentaContrato}}\",\n    \"area\": \"{{area}}\",\n    \"fechaRadicacion\": \"2025-03-15T08:00:00-05:00\",\n    \"tipoSolicitud\": \"Derecho de petición\",\n    \"tipoTramite\": \"DEE\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/server/containers/{{containerId}}/processes/{{processId}}/instances/correlation/{{correlationKey}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"server",
+								"containers",
+								"{{containerId}}",
+								"processes",
+								"{{processId}}",
+								"instances",
+								"correlation",
+								"{{correlationKey}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consutar Variables Instancia Proceso",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{restPassword}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{restUser}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/server/containers/{{containerId}}/processes/instances/{{processInstanceId}}/variables",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"server",
+								"containers",
+								"{{containerId}}",
+								"processes",
+								"instances",
+								"{{processInstanceId}}",
+								"variables"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tareas",
+			"item": [
+				{
+					"name": "Consultar Tarea Actual Instancia Proceso",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Check if response status is 200",
+									"if (pm.response.code === 200) {",
+									"    var jsonData = pm.response.json();",
+									"",
+									"    // Ensure \"task-summary\" exists and contains at least one task",
+									"    if (jsonData[\"task-summary\"] && jsonData[\"task-summary\"].length > 0) {",
+									"        var firstTask = jsonData[\"task-summary\"][0]; // Get the first task",
+									"",
+									"        if (firstTask[\"task-id\"]) {",
+									"            pm.environment.set(\"taskInstanceId\", firstTask[\"task-id\"]);",
+									"            console.log(\"Task Instance ID saved: \" + firstTask[\"task-id\"]);",
+									"        } else {",
+									"            console.log(\"No valid task-id found in the response.\");",
+									"        }",
+									"    } else {",
+									"        console.log(\"No active tasks found for processInstanceId: \" + pm.environment.get(\"processInstanceId\"));",
+									"    }",
+									"} else {",
+									"    console.log(\"Request failed with status: \" + pm.response.code);",
+									"}"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{restPassword}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{restUser}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/server/queries/tasks/instances/process/{{processInstanceId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"server",
+								"queries",
+								"tasks",
+								"instances",
+								"process",
+								"{{processInstanceId}}"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "Created,Reserved,InProgress",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reclamar Tarea",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{funcPass}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{funcUser}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/server/containers/{{containerId}}/tasks/{{taskInstanceId}}/states/claimed",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"server",
+								"containers",
+								"{{containerId}}",
+								"tasks",
+								"{{taskInstanceId}}",
+								"states",
+								"claimed"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Iniciar la la Tarea",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{funcPass}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{funcUser}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/server/containers/{{containerId}}/tasks/{{taskInstanceId}}/states/started",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"server",
+								"containers",
+								"{{containerId}}",
+								"tasks",
+								"{{taskInstanceId}}",
+								"states",
+								"started"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Rol-Tipificador",
+			"item": [
+				{
+					"name": "Completar - Tipificar Solicitud-CU-Clasificar",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{funcPass}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{funcUser}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"tipificarRechazoFlag\": false, //Requerido\n    \"clasificacionInterna\": \"Clasificacion1\",\n    \"tipificarRechazoCausal\": null,\n    \"tipificarRechazoCausalOtro\": null,\n    \"tipificarRechazoObs\": null,\n    \"tipificarAutFlag\": false, //Requerido\n    \"tipificarAutTipoSolicitud\": null,\n    \"tipificarAutUsuario\": null,\n    \"tipificarAutJustificacion\": null\n    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/server/containers/{{containerId}}/tasks/{{taskInstanceId}}/states/completed",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"server",
+								"containers",
+								"{{containerId}}",
+								"tasks",
+								"{{taskInstanceId}}",
+								"states",
+								"completed"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Completar - Tipificar Solicitud-CU-Rechazo",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{funcPass}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{funcUser}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"tipificarRechazoFlag\": true,\n    \"clasificacionInterna\": null,\n    \"tipificarRechazoCausal\": \"Causal1\",\n    \"tipificarRechazoCausalOtro\": null,\n    \"tipificarRechazoObs\": \"Testing\",\n    \"tipificarAutFlag\": null,\n    \"tipificarAutTipoSolicitud\": null,\n    \"tipificarAutUsuario\": null,\n    \"tipificarAutJustificacion\": null\n    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/server/containers/{{containerId}}/tasks/{{taskInstanceId}}/states/completed",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"server",
+								"containers",
+								"{{containerId}}",
+								"tasks",
+								"{{taskInstanceId}}",
+								"states",
+								"completed"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Completar - Tipificar Solicitud-CU-Autorizacion",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{funcPass}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{funcUser}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"tipificarRechazoFlag\": false,\n    \"clasificacionInterna\": null,\n    \"tipificarRechazoCausal\": null,\n    \"tipificarRechazoCausalOtro\": null,\n    \"tipificarRechazoObs\": null,\n    \"tipificarAutFlag\": true,\n    \"tipificarAutTipoSolicitud\": \"Solicitud por rechazo extemporáneo\",\n    \"tipificarAutJustificacion\": \"Muchas asignaciones\",\n    \"tipificarAutUsuario\": \"autorizador1\"\n    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/server/containers/{{containerId}}/tasks/{{taskInstanceId}}/states/completed",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"server",
+								"containers",
+								"{{containerId}}",
+								"tasks",
+								"{{taskInstanceId}}",
+								"states",
+								"completed"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Completar - Asignar Solicitud",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{funcPass}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{funcUser}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"usuarioProyector\": \"proyector1\" //requerido\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/server/containers/{{containerId}}/tasks/{{taskInstanceId}}/states/completed",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"server",
+								"containers",
+								"{{containerId}}",
+								"tasks",
+								"{{taskInstanceId}}",
+								"states",
+								"completed"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Completar - Reasignar Solicitud",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{funcPass}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{funcUser}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"reasignarUsuarioProyector\": \"proyector2\" //requerido\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/server/containers/{{containerId}}/tasks/{{taskInstanceId}}/states/completed",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"server",
+								"containers",
+								"{{containerId}}",
+								"tasks",
+								"{{taskInstanceId}}",
+								"states",
+								"completed"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Rol-Autorizador",
+			"item": [
+				{
+					"name": "Completar - Autorizar Rechazo Extemporáneo Tipificador",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{funcPass}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{funcUser}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"autRechExtempTipFlag\": true, //requerido\n    \"autRechExtempTipObs\": \"\" //requerido cuando autRechExtempTipFlag es false\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/server/containers/{{containerId}}/tasks/{{taskInstanceId}}/states/completed",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"server",
+								"containers",
+								"{{containerId}}",
+								"tasks",
+								"{{taskInstanceId}}",
+								"states",
+								"completed"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Rol-Proyector",
+			"item": [
+				{
+					"name": "Completar - Proyectar Respuesta - CU: Proyectar Aprobación",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{funcPass}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{funcUser}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"proyectarFlag\": true, //requerido\n    \"proyectarAprobadores\": [\n        {\n            \"usuario\": \"revisor1\",\n            \"actividad\": \"revisor\" //Requerido, [revisor, aprobador, aprobar y firmar]\n\n        },\n        {\n            \"usuario\": \"aprobador1\",\n            \"actividad\": \"aprobador\"\n        },\n        {\n            \"usuario\": \"jefe1\",\n            \"actividad\": \"aprobar y firmar\"\n        }\n\n    ], //Requerido para flujo de aprobación\n    \"usuarioProyectorEsJefe\": false, //Requerido. Debe ser true cuando no se va ejecutar el flujo de aprobación\n    \"proyectarRechazoFlag\": false, //Requerido. True para rechazar la asignación\n    \"proyectarRechazoCausal\": null,\n    \"proyectarRechazoObs\": null,\n    \"proyectarRechazoOtro\":null\n    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/server/containers/{{containerId}}/tasks/{{taskInstanceId}}/states/completed",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"server",
+								"containers",
+								"{{containerId}}",
+								"tasks",
+								"{{taskInstanceId}}",
+								"states",
+								"completed"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Completar - Proyectar Respuesta - CU: Rechazo",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{funcPass}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{funcUser}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"proyectarFlag\": false, //requerido\n    \"proyectarAprobadores\":null, //Requerido para flujo de aprobación\n    \"usuarioProyectorEsJefe\": false, //Requerido. Debe ser true cuando no se va ejecutar el flujo de aprobación\n    \"proyectarRechazoFlag\": true, //Requerido. True para rechazar la asignación\n    \"proyectarRechazoCausal\": \"test rechazo\",\n    \"proyectarRechazoObs\": \"test obs\",\n    \"proyectarRechazoOtro\":null\n    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/server/containers/{{containerId}}/tasks/{{taskInstanceId}}/states/completed",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"server",
+								"containers",
+								"{{containerId}}",
+								"tasks",
+								"{{taskInstanceId}}",
+								"states",
+								"completed"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Completar - Gestionar Rechazo - CU: Continuar Aprobación",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{funcPass}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{funcUser}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/server/containers/{{containerId}}/tasks/{{taskInstanceId}}/states/completed",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"server",
+								"containers",
+								"{{containerId}}",
+								"tasks",
+								"{{taskInstanceId}}",
+								"states",
+								"completed"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Completar - Generar Radicado Salida - CU: Continuar",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{funcPass}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{funcUser}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"numRadSalida\": \"SAL-20250402001\", //requerido\n    \"fechaRadicacionSalida\": \"2025-04-02T08:00:00-05:00\", //Requerido formato yyyy-MM-dd'T'HH:mm:ssXXX\n    \"declaracionDocArchivoFlag\": true //Requerido\n    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/server/containers/{{containerId}}/tasks/{{taskInstanceId}}/states/completed",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"server",
+								"containers",
+								"{{containerId}}",
+								"tasks",
+								"{{taskInstanceId}}",
+								"states",
+								"completed"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Rol-Revisor",
+			"item": [
+				{
+					"name": "Completar - Revisar Respuesta - CU: Aprobar",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{funcPass}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{funcUser}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"apruebaFlag\": true, //requerido\n    \"apruebaRechazoCausal\": null, //Requerido. True para rechazar la asignación\n    \"apruebaRechazoObs\": null,\n    \"apruebaRechazoOtro\": null\n    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/server/containers/{{containerId}}/tasks/{{taskInstanceId}}/states/completed",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"server",
+								"containers",
+								"{{containerId}}",
+								"tasks",
+								"{{taskInstanceId}}",
+								"states",
+								"completed"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Completar - Revisar Respuesta - CU: Rechazar",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{funcPass}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{funcUser}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"apruebaFlag\": false, //requerido\n    \"apruebaRechazoCausal\": \"Causal1\", //Requerido. True para rechazar la asignación\n    \"apruebaRechazoObs\": \"Favor corregir X\",\n    \"apruebaRechazoOtro\": null\n    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/server/containers/{{containerId}}/tasks/{{taskInstanceId}}/states/completed",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"server",
+								"containers",
+								"{{containerId}}",
+								"tasks",
+								"{{taskInstanceId}}",
+								"states",
+								"completed"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Rol-Aprobador",
+			"item": [
+				{
+					"name": "Completar - Aprobar Respuesta - CU: Aprobar",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{funcPass}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{funcUser}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"apruebaFlag\": true, //requerido\n    \"apruebaRechazoCausal\": null, //Requerido. True para rechazar la asignación\n    \"apruebaRechazoObs\": null,\n    \"apruebaRechazoOtro\": null\n    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/server/containers/{{containerId}}/tasks/{{taskInstanceId}}/states/completed",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"server",
+								"containers",
+								"{{containerId}}",
+								"tasks",
+								"{{taskInstanceId}}",
+								"states",
+								"completed"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Completar - Aprobar Respuesta - CU: Rechazar",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{funcPass}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{funcUser}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"apruebaFlag\": false, //requerido\n    \"apruebaRechazoCausal\": \"Causal1\", //Requerido. True para rechazar la asignación\n    \"apruebaRechazoObs\": \"Favor corregir X\",\n    \"apruebaRechazoOtro\": null\n    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/server/containers/{{containerId}}/tasks/{{taskInstanceId}}/states/completed",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"server",
+								"containers",
+								"{{containerId}}",
+								"tasks",
+								"{{taskInstanceId}}",
+								"states",
+								"completed"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Rol-JefeArea",
+			"item": [
+				{
+					"name": "Completar - Aprobar Respuesta - CU: Aprobar",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{funcPass}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{funcUser}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"apruebaFlag\": true, //requerido\n    \"apruebaRechazoCausal\": null, //Requerido. True para rechazar la asignación\n    \"apruebaRechazoObs\": null,\n    \"apruebaRechazoOtro\": null\n    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/server/containers/{{containerId}}/tasks/{{taskInstanceId}}/states/completed",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"server",
+								"containers",
+								"{{containerId}}",
+								"tasks",
+								"{{taskInstanceId}}",
+								"states",
+								"completed"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Completar - Aprobar Respuesta - CU: Rechazar",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{funcPass}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{funcUser}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"apruebaFlag\": false, //requerido\n    \"apruebaRechazoCausal\": \"Causal1\", //Requerido. True para rechazar la asignación\n    \"apruebaRechazoObs\": \"Favor corregir X\",\n    \"apruebaRechazoOtro\": null\n    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/server/containers/{{containerId}}/tasks/{{taskInstanceId}}/states/completed",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"server",
+								"containers",
+								"{{containerId}}",
+								"tasks",
+								"{{taskInstanceId}}",
+								"states",
+								"completed"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
